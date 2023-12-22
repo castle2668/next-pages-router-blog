@@ -10,7 +10,7 @@ import PostHeader from './post-header';
 const PostContent = (props) => {
   const { post } = props;
 
-  const imagePath = `/images/posts/${post.slug}/${post.image}`;
+  const imagePath = `/images/blog-posts/${post.slug}/${post.image}`;
 
   const customRenderers = {
     p(paragraph) {
@@ -22,10 +22,10 @@ const PostContent = (props) => {
         return (
           <div className={classes.image}>
             <Image
-              src={`/images/posts/${post.slug}/${image.properties.src}`}
+              src={`/images/blog-posts/${post.slug}/${image.properties.src}`}
               alt={image.properties.alt}
-              width={600}
-              height={300}
+              fill
+              objectFit="cover"
             />
           </div>
         );
