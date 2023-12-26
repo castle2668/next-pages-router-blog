@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-import classes from './archives-list.module.css';
+import classes from './archives-list.module.scss';
 
 const ArchivesList = (props) => {
   const { posts, count } = props;
@@ -16,7 +16,7 @@ const ArchivesList = (props) => {
           <ul>
             {yearPosts.posts.map((post) => (
               <li key={post.slug}>
-                <span>{post.month}</span>
+                <span>{post.month}</span>{' '}
                 <Link href={`/posts/${post.slug}`} alt={post.title}>
                   {post.title}
                 </Link>
