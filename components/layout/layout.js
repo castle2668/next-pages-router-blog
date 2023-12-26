@@ -1,12 +1,17 @@
 import React from 'react';
 
-import MainNavigation from './main-navigation';
+import Footer from './footer';
+import Header from './header';
+import classes from './layout.module.css';
 
 const Layout = (props) => {
   return (
     <>
-      <MainNavigation />
-      <main>{props.children}</main>
+      <Header />
+      <div className={classes.container}>
+        <main>{props.children}</main>
+      </div>
+      <Footer />
     </>
   );
 };

@@ -1,9 +1,14 @@
+import Link from 'next/link';
 import React from 'react';
 
 import classes from './logo.module.css';
 
 const Logo = () => {
-  return <div className={classes.logo}>{`Yunghsiang's Next Blog`}</div>;
+  return (
+    <Link href="/" className={classes.logo}>
+      <h1>{`Yunghsiang's Blog`}</h1>
+    </Link>
+  );
 };
 
 export default Logo;

@@ -25,7 +25,6 @@ const PostContent = (props) => {
               src={`/images/blog-posts/${post.slug}/${image.properties.src}`}
               alt={image.properties.alt}
               fill
-              objectFit="cover"
             />
           </div>
         );

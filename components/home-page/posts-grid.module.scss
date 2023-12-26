@@ -1,0 +1,22 @@
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+
+  /* 單欄在小螢幕上 */
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  /* 雙欄在中等螢幕上 */
+  @media (min-width: 601px) and (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* 三欄在大螢幕上 */
+  @media (min-width: 901px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
