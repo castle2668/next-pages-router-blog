@@ -1,0 +1,14 @@
+.tags {
+  h2 {
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+    &:hover {
+      color: var(--color-maple);
+    }
+  }
+}

@@ -4,6 +4,7 @@ excerpt: JavaScript is the most important programming language for web developme
 image: mastering-js-thumb.png
 isFeatured: true
 date: '2021-10-30'
+tags: ['Operating System', 'NUK']
 ---
 
 JavaScript powers the web - it's **the** most important programming language you need to know as a web developer.
