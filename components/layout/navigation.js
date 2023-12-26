@@ -9,7 +9,7 @@ const navigationList = [
   { name: '所有文章', path: '/posts' },
   { name: '歸檔', path: '/archives' },
   { name: '標籤列表', path: '/tags' },
-  { name: '關於我', path: '/about-me' },
+  { name: '關於我', path: '/about' },
 ];
 
 const Navigation = () => {

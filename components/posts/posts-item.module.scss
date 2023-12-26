@@ -1,0 +1,45 @@
+.post {
+  border-bottom: 1px solid #eee;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding: 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+  time {
+    font-style: italic;
+    color: hsl(265, 6%, 66%);
+  }
+  p {
+    margin: 0;
+    line-height: 24px;
+  }
+}
+
+.image {
+  position: relative;
+  min-width: 200px;
+  height: 150px;
+  img {
+    object-fit: cover;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
