@@ -4,5 +4,4 @@
   padding: 16px;
   min-height: calc(100vh - 548px);
   height: 100%;
-  background-color: var(--container-background-color);
 }
