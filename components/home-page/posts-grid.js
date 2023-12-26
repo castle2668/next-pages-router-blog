@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './posts-grid.module.scss';
-import PostsItem from './posts-item';
+import PostsItem from './posts-grid-item';
 
 const PostsGrid = (props) => {
   const { posts } = props;

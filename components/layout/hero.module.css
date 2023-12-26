@@ -24,13 +24,12 @@
 .hero h1 {
   font-size: 20px;
   margin: 0;
-  color: var(--color-grey-white);
+  color: var(--color-sheep);
 }
 
 .hero p {
-  color: var(--color-grey-white);
-  width: 90%;
-  max-width: 640px;
+  color: var(--color-sheep);
+  max-width: var(--container-width);
   margin: 0 auto;
   text-align: center;
 }

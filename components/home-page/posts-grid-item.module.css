@@ -1,15 +1,16 @@
 .post {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  background-color: hsl(276, 5%, 20%);
+  background-color: var(--featured-post-background);
   text-align: center;
 }
 
 .post a {
-  color: hsl(265, 19%, 88%);
+  color: var(--featured-post-text);
   text-decoration: none;
 }
 
 .image {
+  position: relative;
   width: 100%;
   height: 200px;
   max-height: 20rem;
@@ -31,7 +32,7 @@
 
 .content time {
   font-style: italic;
-  color: hsl(265, 6%, 66%);
+  color: var(--featured-post-time);
 }
 
 .content p {

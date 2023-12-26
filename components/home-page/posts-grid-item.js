@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import classes from './posts-item.module.css';
+import classes from './posts-grid-item.module.css';
 
-const PostsItem = (props) => {
+const PostsGridItem = (props) => {
   const { title, image, excerpt, date, slug } = props.post;
 
   const formattedDate = new Date(date).toLocaleDateString('en-US', {
@@ -19,7 +19,7 @@ const PostsItem = (props) => {
   return (
     <li className={classes.post}>
       <Link href={linkPath}>
-        <div className={classes.image} style={{ position: 'relative' }}>
+        <div className={classes.image}>
           <Image
             src={imagePath}
             alt={title}
@@ -40,4 +40,4 @@ const PostsItem = (props) => {
   );
 };
 
-export default PostsItem;
+export default PostsGridItem;

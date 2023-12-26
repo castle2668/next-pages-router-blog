@@ -18,7 +18,9 @@ function Hero() {
       <h1>{`Hi, I'm Yunghsiang`}</h1>
       <p>
         I blog about web development - especially frontend frameworks like React
-        or Next. Passion Comes From Mastery.
+        or Next.
+        <br />
+        Passion Comes From Mastery.
       </p>
       <div className={classes.social}>
         <Link href="https://www.linkedin.com/in/yunghsiang" target="_blank">
