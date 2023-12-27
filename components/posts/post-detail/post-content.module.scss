@@ -1,0 +1,114 @@
+.content {
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 16px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+    padding: 16px 32px;
+  }
+  // 開啟動畫
+  animation-name: open-post;
+  animation-duration: 1s;
+  @keyframes open-post {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  p {
+    color: #333;
+  }
+
+  .image {
+    margin: 16px auto;
+    width: 100%;
+    max-width: 600px;
+    height: 300px; // Next Image will stretch to fit this container
+    position: relative;
+  }
+
+  h2 {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  a {
+    word-break: break-all;
+    text-decoration: none;
+    color: var(--color-maple);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  code:not([class]) {
+    background-color: rgba(27, 31, 35, 0.06);
+    color: #274878;
+    font-size: 14px;
+    padding: 3px 8px;
+  }
+
+  pre[data-language] {
+    position: relative;
+    padding: 32px 16px 16px 16px;
+    &::before {
+      content: attr(data-language);
+      position: absolute;
+      top: 0;
+      right: 16px;
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 0 0 4px 4px;
+      font-size: 14px;
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: bold;
+      // 使用不同的 data-language 值來設定不同的顏色
+      background: #000;
+      color: #fff;
+    }
+    &[data-language='javascript']::before,
+    &[data-language='js']::before,
+    &[data-language='jsx']::before {
+      background: #f7df1e;
+      color: #000;
+    }
+    &[data-language='html']::before {
+      background: #005a9c;
+      color: #fff;
+    }
+    &[data-language='css']::before,
+    &[data-language='scss']::before {
+      background: #ff9800;
+      color: #fff;
+    }
+    &[data-language='shell']::before,
+    &[data-language='bash']::before {
+      background: #000;
+      color: #fff;
+    }
+    code {
+      font-size: 14px;
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  blockquote {
+    border-left: 4px solid #c1170c;
+    line-height: 1.8;
+    padding-left: 16px;
+    margin: 0 0 20px 20px;
+  }
+
+  ul li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}

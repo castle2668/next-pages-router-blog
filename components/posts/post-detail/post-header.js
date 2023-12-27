@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-import classes from './post-header.module.css';
+import classes from './post-header.module.scss';
 
 const PostHeader = (props) => {
   const { title, image } = props;
