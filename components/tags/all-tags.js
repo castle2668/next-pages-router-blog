@@ -16,14 +16,15 @@ const groupByTag = (posts) => {
         }
         postsByTag[tag].push(post);
       });
-    } else {
-      // 如果文章沒有標籤，可以放入一個預設的標籤，例如 "NoTag"
-      const defaultTag = 'NoTag';
-      if (!postsByTag[defaultTag]) {
-        postsByTag[defaultTag] = [];
-      }
-      postsByTag[defaultTag].push(post);
     }
+    // else {
+    //   // 如果文章沒有標籤，可以放入一個預設的標籤，例如 "NoTag"
+    //   const defaultTag = 'NoTag';
+    //   if (!postsByTag[defaultTag]) {
+    //     postsByTag[defaultTag] = [];
+    //   }
+    //   postsByTag[defaultTag].push(post);
+    // }
   });
 
   // 將物件轉換為陣列
