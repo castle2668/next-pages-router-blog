@@ -41,17 +41,18 @@ const groupByYear = (posts) => {
   });
 
   // 將物件轉換為陣列
-  const postsByYearArray = Object.entries(postsByYear).map(([year, posts]) => ({
-    year: parseInt(year, 10),
-    posts,
-  }));
+  const postsByYearArray = Object.entries(postsByYear)
+    .map(([year, posts]) => ({
+      year: parseInt(year, 10),
+      posts,
+    }))
+    .sort((a, b) => b.year - a.year);
 
   return postsByYearArray;
 };
 
 const ArchivesList = (props) => {
   const { posts, count } = props;
-
   const postsWithMonth = addMonthProperty(posts);
   const postsByYear = groupByYear(postsWithMonth);
 
