@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import React from 'react';
 
-import FeaturedPosts from '@/components/home-page/featured-posts';
-import { getFeaturedPosts } from '@/utils/posts-util';
+import AllPosts from '@/components/posts/all-posts';
+import { getAllPosts } from '@/utils/posts-util';
 
 function HomePage(props) {
   return (
@@ -14,20 +14,19 @@ function HomePage(props) {
           content="I post about programming and web development."
         />
       </Head>
-      <FeaturedPosts posts={props.posts} />
+      <AllPosts posts={props.posts} />
     </>
   );
 }
 
-export function getStaticProps() {
-  const featuredPosts = getFeaturedPosts();
+export const getStaticProps = () => {
+  const allPosts = getAllPosts();
 
   return {
     props: {
-      posts: featuredPosts,
+      posts: allPosts,
     },
-    // revalidate: 1800, // 30 minutes
   };
-}
+};
 
 export default HomePage;

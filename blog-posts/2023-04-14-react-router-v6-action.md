@@ -1,8 +1,10 @@
 ---
-title: "React Router V6 - Form & Action"
-excerpt: "上一篇介紹了 React Router V6 的 Loader，本文會介紹另一個重要的新功能 Action 與表單處理方式。"
-tags: ["React", "React Router"]
-date: "2023-04-14"
+title: 'React Router V6 - Form & Action'
+date: '2023-04-14'
+image: getting-started-with-nextjs.png
+excerpt: 上一篇介紹了 React Router V6 的 Loader，本文會介紹另一個重要的新功能 Action 與表單處理方式。
+tags: ['React', 'React Router']
+# isFeatured: true
 ---
 
 ## Use action() to Send Form Data
@@ -14,7 +16,7 @@ React Router V6 提供的 `<Form>` 元件會阻止原生的表單行為，路由
 以下是一個簡單的範例：
 
 ```jsx
-import { Form } from "react-router-dom";
+import { Form } from 'react-router-dom';
 
 const EventForm = () => {
   return (
@@ -39,25 +41,25 @@ export const action = async ({ request, params }) => {
   const data = await request.formData();
 
   const eventData = {
-    title: data.get("title"), // get("title") 對應到 name＝"title" 的 input
-    image: data.get("image"),
-    date: data.get("date"),
-    description: data.get("description"),
+    title: data.get('title'), // get("title") 對應到 name＝"title" 的 input
+    image: data.get('image'),
+    date: data.get('date'),
+    description: data.get('description'),
   };
 
-  const response = await fetch("http://localhost:8080/events", {
-    method: "POST",
+  const response = await fetch('http://localhost:8080/events', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(eventData),
   });
 
   if (!response.ok) {
-    throw json({ message: "Could not send event" }, { status: 500 });
+    throw json({ message: 'Could not send event' }, { status: 500 });
   }
 
-  return redirect("/events");
+  return redirect('/events');
 };
 ```
 
@@ -76,17 +78,17 @@ export const action = async ({ request, params }) => {
 接著執行的 `submit()` 函式可以放入兩個參數，第一個參數是 FormData 的物件，第二個參數是 Form 表單元素的 Properties。
 
 ```jsx
-import { useSubmit } from "react-router-dom";
+import { useSubmit } from 'react-router-dom';
 
 const EventItem = ({ event }) => {
   const submit = useSubmit();
 
   const startDeleteHandler = () => {
-    const proceed = window.confirm("Are you sure you want to delete");
+    const proceed = window.confirm('Are you sure you want to delete');
 
     if (proceed) {
       // params: FormData Object, Form Properties
-      submit(null, { method: "delete" });
+      submit(null, { method: 'delete' });
     }
   };
 
@@ -116,10 +118,10 @@ export const action = async ({ request, params }) => {
   });
 
   if (!response.ok) {
-    throw json({ message: "Could not delete event" }, { status: 500 });
+    throw json({ message: 'Could not delete event' }, { status: 500 });
   }
 
-  return redirect("/events");
+  return redirect('/events');
 };
 ```
 

@@ -1,12 +1,18 @@
 import React from 'react';
 
 import classes from './all-posts.module.css';
-import PostsList from './posts-list';
+import PostsItem from './posts-item';
 
 const AllPosts = (props) => {
+  const { posts } = props;
+
   return (
     <section className={classes.posts}>
-      <PostsList posts={props.posts} />
+      <ul className={classes.list}>
+        {posts.map((post) => (
+          <PostsItem key={post.slug} post={post} />
+        ))}
+      </ul>
     </section>
   );
 };

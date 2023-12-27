@@ -5,9 +5,16 @@ import React from 'react';
 import classes from './posts-item.module.scss';
 
 const PostsItem = (props) => {
-  const { title, image, excerpt, date, slug } = props.post;
+  const { title, image, excerpt, date, slug, tags } = props.post;
 
-  const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  // April 14, 2023
+  // const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  //   day: 'numeric',
+  //   month: 'long',
+  //   year: 'numeric',
+  // });
+  // 2023年4月14日
+  const formattedDate = new Date(date).toLocaleDateString('zh-TW', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
@@ -18,23 +25,25 @@ const PostsItem = (props) => {
 
   return (
     <li className={classes.post}>
-      <Link href={linkPath}>
-        <div className={classes.row}>
-          <div className={classes.content}>
-            <h3>{title}</h3>
-            <time>{formattedDate}</time>
-            <p>{excerpt}</p>
-          </div>
-          <div className={classes.image}>
-            <Image
-              src={imagePath}
-              alt={title}
-              fill
-              sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
-            />
-          </div>
-        </div>
-      </Link>
+      <div className={classes.tags}>
+        {tags.map((tag) => (
+          <Link key={tag} href={`/tags/${tag}`} className={classes.tag}>
+            {tag}
+          </Link>
+        ))}
+      </div>
+      <div className={classes.content}>
+        <Link href={linkPath}>
+          <h3>{title}</h3>
+          {image && (
+            <div className={classes.image}>
+              <Image src={imagePath} alt={title} fill />
+            </div>
+          )}
+          <p>{excerpt}</p>
+          <time>📅 {formattedDate}</time>
+        </Link>
+      </div>
     </li>
   );
 };
