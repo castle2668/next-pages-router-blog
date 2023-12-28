@@ -37,10 +37,8 @@ export const getAllPosts = () => {
   return sortedPosts;
 };
 
-export function getFeaturedPosts() {
-  const allPosts = getAllPosts();
-
-  const featuredPosts = allPosts.filter((post) => post.isFeatured);
-
-  return featuredPosts;
-}
+// export function getFeaturedPosts() {
+//   const allPosts = getAllPosts();
+//   const featuredPosts = allPosts.filter((post) => post.isFeatured);
+//   return featuredPosts;
+// }

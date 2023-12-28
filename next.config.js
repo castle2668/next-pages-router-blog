@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.creativecommons.org',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+      },
     ],
   },
 };

@@ -9,8 +9,14 @@ import PostHeader from './post-header';
 
 const PostContent = (props) => {
   const { post } = props;
+  const { title, image, date, slug, content } = post;
 
-  const imagePath = `/images/blog-posts/${post.slug}/${post.image}`;
+  const imagePath = `/images/blog-posts/${slug}/${image}`;
+  const formattedDate = new Date(date).toLocaleDateString('zh-TW', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
 
   const customRenderers = {
     p(paragraph) {
@@ -18,14 +24,14 @@ const PostContent = (props) => {
 
       if (node.children[0].tagName === 'img') {
         const image = node.children[0];
+        const src = image.properties.src.includes('https')
+          ? image.properties.src
+          : `/images/blog-posts/${slug}/${image.properties.src}`;
 
         return (
           <div className={classes.image}>
-            <Image
-              src={`/images/blog-posts/${post.slug}/${image.properties.src}`}
-              alt={image.properties.alt}
-              fill
-            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={src} alt={image.properties.alt} />
           </div>
         );
       }
@@ -59,8 +65,11 @@ const PostContent = (props) => {
 
   return (
     <article className={classes.content}>
-      <PostHeader title={post.title} image={imagePath} />
-      <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
+      <PostHeader title={title} image={image && imagePath} />
+      <p className={classes.date}>
+        <time>📆 {formattedDate}</time>
+      </p>
+      <ReactMarkdown components={customRenderers}>{content}</ReactMarkdown>
     </article>
   );
 };

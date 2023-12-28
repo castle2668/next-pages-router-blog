@@ -25,19 +25,21 @@ const PostsItem = (props) => {
 
   return (
     <li className={classes.post}>
-      <div className={classes.tags}>
-        {tags.map((tag) => (
-          <Link key={tag} href={`/tags/${tag}`} className={classes.tag}>
-            {tag}
-          </Link>
-        ))}
-      </div>
+      {tags && (
+        <div className={classes.tags}>
+          {tags.map((tag) => (
+            <Link key={tag} href={`/tags/${tag}`} className={classes.tag}>
+              {tag}
+            </Link>
+          ))}
+        </div>
+      )}
       <div className={classes.content}>
         <Link href={linkPath}>
           <h3>{title}</h3>
           {image && (
             <div className={classes.image}>
-              <Image src={imagePath} alt={title} fill />
+              <Image src={imagePath} alt={title} fill sizes="100vw" />
             </div>
           )}
           <p>{excerpt}</p>

@@ -1,6 +1,6 @@
 .posts {
   max-width: var(--container-width);
-  margin: 0 auto;
+  margin: 16px auto;
 }
 
 .posts h1 {

@@ -8,7 +8,7 @@
     font-size: 18px;
     padding: 16px 32px;
   }
-  // 開啟動畫
+  // 進場動畫
   animation-name: open-post;
   animation-duration: 1s;
   @keyframes open-post {
@@ -21,15 +21,15 @@
   }
 
   p {
-    color: #333;
+    color: #222;
   }
 
   .image {
     margin: 16px auto;
-    width: 100%;
-    max-width: 600px;
-    height: 300px; // Next Image will stretch to fit this container
-    position: relative;
+    img {
+      max-width: 100%;
+      max-height: 50vh;
+    }
   }
 
   h2 {
@@ -110,5 +110,12 @@
   ul li {
     margin-top: 4px;
     margin-bottom: 4px;
+  }
+
+  .date {
+    font-size: 14px;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
   }
 }
