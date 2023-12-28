@@ -3,9 +3,10 @@ import React from 'react';
 
 import AllTags from '@/components/tags/all-tags';
 import { getAllPosts } from '@/utils/posts-util';
+import { getAllTags } from '@/utils/tags-util';
 
 const AllTagsPage = (props) => {
-  const { posts } = props;
+  const { tags } = props;
 
   return (
     <>
@@ -16,7 +17,7 @@ const AllTagsPage = (props) => {
           content="I post about programming and web development."
         />
       </Head>
-      <AllTags posts={posts} />
+      <AllTags tags={tags} />
     </>
   );
 };
@@ -25,10 +26,11 @@ export default AllTagsPage;
 
 export const getStaticProps = () => {
   const allPosts = getAllPosts();
+  const allTags = getAllTags(allPosts);
 
   return {
     props: {
-      posts: allPosts,
+      tags: allTags,
     },
   };
 };
