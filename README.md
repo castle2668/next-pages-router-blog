@@ -4,7 +4,7 @@
 
 - Next.js 14
 - CSS Modules
-- ~~MongoDB~~
+- MongoDB
 - react-markdown + react-syntax-highlighter + gray-matter
 
 ## 開發規範

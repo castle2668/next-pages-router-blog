@@ -84,7 +84,7 @@ const ContactForm = () => {
 
   return (
     <section className={classes.contact}>
-      <h1>How can I help you?</h1>
+      <h2>How can I help you?</h2>
       <form className={classes.form} onSubmit={sendMessageHandler}>
         <div className={classes.controls}>
           <div className={classes.control}>

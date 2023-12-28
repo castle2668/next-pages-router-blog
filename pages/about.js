@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+import ContactForm from '@/components/contact/contact-form';
+
 const AboutPage = () => {
   return (
     <>
@@ -49,6 +51,8 @@ const AboutPage = () => {
           height={31}
         />
       </Link>
+      <h2>📮 Contact Me | 聯絡我</h2>
+      <ContactForm />
     </>
   );
 };
