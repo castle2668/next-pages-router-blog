@@ -50,8 +50,8 @@
 .form button {
   font: inherit;
   cursor: pointer;
-  background-color: #c1170c;
-  border: 1px solid #c1170c;
+  background-color: var(--color-maple);
+  border: 1px solid var(--color-maple);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   color: #fff;

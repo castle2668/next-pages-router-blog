@@ -1,0 +1,29 @@
+.pagination {
+  border: 1px solid #eee;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  a,
+  span {
+    display: inline-block;
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+  }
+  a {
+    color: var(--color-maple);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      background-color: #eee;
+    }
+  }
+  span {
+    color: #333;
+  }
+  > *:first-child {
+    border-right: 1px solid #eee;
+  }
+  > *:last-child {
+    margin-left: -1px;
+  }
+}

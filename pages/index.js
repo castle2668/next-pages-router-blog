@@ -14,17 +14,23 @@ function HomePage(props) {
           content="I post about programming and web development."
         />
       </Head>
-      <AllPosts posts={props.posts} />
+      <AllPosts
+        posts={props.posts}
+        currentPage={props.currentPage}
+        numPages={props.numPages}
+      />
     </>
   );
 }
 
 export const getStaticProps = () => {
-  const paginatedPosts = getPaginatedPosts(1);
+  const { posts, currentPage, numPages } = getPaginatedPosts(1);
 
   return {
     props: {
-      posts: paginatedPosts,
+      posts,
+      currentPage,
+      numPages,
     },
   };
 };

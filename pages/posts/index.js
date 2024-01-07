@@ -14,17 +14,23 @@ const AllPostsPage = (props) => {
           content="A list of all programming-related tutorials and posts!"
         />
       </Head>
-      <AllPosts posts={props.posts} />
+      <AllPosts
+        posts={props.posts}
+        currentPage={props.currentPage}
+        numPages={props.numPages}
+      />
     </>
   );
 };
 
 export const getStaticProps = () => {
-  const paginatedPosts = getPaginatedPosts(1);
+  const { posts, currentPage, numPages } = getPaginatedPosts(1);
 
   return {
     props: {
-      posts: paginatedPosts,
+      posts,
+      currentPage,
+      numPages,
     },
   };
 };

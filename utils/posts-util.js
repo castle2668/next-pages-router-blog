@@ -45,13 +45,18 @@ export const getAllPosts = () => {
 
 // 生成每頁的文章陣列
 export const getPaginatedPosts = (page = 1, postsPerPage = 10) => {
+  const currentPage = parseInt(page);
   const sortedPosts = getAllPosts();
 
-  const startIndex = (page - 1) * postsPerPage;
+  const startIndex = (currentPage - 1) * postsPerPage;
   const endIndex = startIndex + postsPerPage;
   const paginatedPosts = sortedPosts.slice(startIndex, endIndex);
 
-  return paginatedPosts;
+  return {
+    posts: paginatedPosts,
+    currentPage: currentPage, // 當前頁數
+    numPages: Math.ceil(sortedPosts.length / postsPerPage), // 總頁數
+  };
 };
 
 // 生成文章的分頁陣列

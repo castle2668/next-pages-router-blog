@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 
 import ArchivesList from '@/components/archives-page/archives-list';
-import { getAllPosts } from '@/utils/posts-util';
+import { getArchives } from '@/utils/archives-util';
 
 const ArchivesPage = (props) => {
   const { posts } = props;
@@ -23,11 +23,11 @@ const ArchivesPage = (props) => {
 export default ArchivesPage;
 
 export const getStaticProps = () => {
-  const allPosts = getAllPosts();
+  const archives = getArchives();
 
   return {
     props: {
-      posts: allPosts,
+      posts: archives,
     },
   };
 };
