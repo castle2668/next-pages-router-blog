@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
 
-import AllPosts from '@/components/posts/all-posts';
 import TagDetail from '@/components/tags/tag-detail';
 import { getAllPosts } from '@/utils/posts-util';
 import { getAllTags, getTagData } from '@/utils/tags-util';

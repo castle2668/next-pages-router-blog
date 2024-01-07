@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -7,6 +8,13 @@ import ContactForm from '@/components/contact/contact-form';
 const AboutPage = () => {
   return (
     <>
+      <Head>
+        <title>About</title>
+        <meta
+          name="description"
+          content="I post about programming and web development."
+        />
+      </Head>
       <h2>🍔 About Me | 關於我</h2>
       <p>Frontend Engineer / Taiwanese / Passion Comes From Mastery</p>
       <ul>

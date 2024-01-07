@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 
 import AllPosts from '@/components/posts/all-posts';
-import { getAllPosts } from '@/utils/posts-util';
+import { getPaginatedPosts } from '@/utils/posts-util';
 
 const AllPostsPage = (props) => {
   return (
@@ -20,11 +20,11 @@ const AllPostsPage = (props) => {
 };
 
 export const getStaticProps = () => {
-  const allPosts = getAllPosts();
+  const paginatedPosts = getPaginatedPosts(1);
 
   return {
     props: {
-      posts: allPosts,
+      posts: paginatedPosts,
     },
   };
 };
