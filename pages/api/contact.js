@@ -1,9 +1,9 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
 
+const connectionString = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTERNAME}.ir9rqex.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`;
+
 const connectDatabase = async () => {
-  const uri =
-    'mongodb+srv://yunghsiang:870725@cluster0.ir9rqex.mongodb.net/my-blog?retryWrites=true&w=majority';
-  const client = new MongoClient(uri, {
+  const client = new MongoClient(connectionString, {
     serverApi: {
       version: ServerApiVersion.v1,
       strict: true,
@@ -47,7 +47,6 @@ const handler = async (req, res) => {
     }
 
     const db = client.db();
-    console.log({ db });
 
     try {
       const result = await db.collection('messages').insertOne(newMessage);
