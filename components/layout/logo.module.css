@@ -1,0 +1,16 @@
+.logo {
+  font-family: Kurewa, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo:hover {
+  text-decoration: underline;
+}
+
+.logo h1 {
+  margin: 0;
+  padding: 0 16px;
+  font-size: 32px;
+  letter-spacing: 2px;
+}

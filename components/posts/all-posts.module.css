@@ -1,0 +1,17 @@
+.posts {
+  max-width: var(--container-width);
+  margin: 16px auto;
+}
+
+.posts h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}

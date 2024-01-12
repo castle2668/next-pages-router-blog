@@ -1,0 +1,38 @@
+.header {
+  padding-bottom: 16px;
+  border-bottom: 8px solid var(--color-maple);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  @media (min-width: 768px) {
+    margin: 16px 0;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    color: var(--color-maple);
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+      font-size: 36px;
+    }
+  }
+
+  .image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px; // Next Image will stretch to fit this container
+    position: relative;
+  }
+
+  img {
+    object-fit: cover;
+    width: 200px;
+    height: 120px;
+  }
+}

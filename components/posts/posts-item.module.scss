@@ -1,0 +1,66 @@
+.post {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    .tag {
+      font-size: 0.8rem;
+      color: #332200;
+      background: #eee;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      &:hover {
+        color: var(--color-maple);
+      }
+    }
+  }
+
+  .content {
+    h3 {
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #332200;
+      transition: color 0.3s ease;
+    }
+
+    .image {
+      position: relative;
+      aspect-ratio: 16 / 7;
+      img {
+        object-fit: cover;
+      }
+    }
+
+    p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #222;
+      // 超過三行...
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; // 行數
+      -webkit-box-orient: vertical;
+    }
+
+    time {
+      font-size: 0.8rem;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover h3 {
+      text-decoration: underline;
+      color: #b3a79b;
+    }
+  }
+}
