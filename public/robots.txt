@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://blog.eishou.dev
+
+# Sitemaps
+Sitemap: https://blog.eishou.dev/sitemap.xml

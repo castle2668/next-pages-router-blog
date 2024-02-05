@@ -8,7 +8,7 @@ function HomePage(props) {
   return (
     <>
       <Head>
-        <title>{`Yunghsiang' Blog`}</title>
+        <title>{`Shou' Blog`}</title>
         <meta
           name="description"
           content="I post about programming and web development."

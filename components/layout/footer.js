@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.copyright}>
         Copyright © 2019-2024{' '}
-        <a href="https://github.com/yunghsianghuang">Yunghsiang</a>. All rights
+        <a href="https://github.com/koueishou">Kou Eishou</a>. All rights
         reserved.
         <br />
         All images and other content related to MapleStory are owned by Nexon
