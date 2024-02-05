@@ -1,4 +1,4 @@
-# Yunghsiang's Blog
+# Shou's Blog
 
 ## 使用技術
 
@@ -15,13 +15,17 @@
 
 ## 待辦清單
 
-- [ ] SEO 設定：Meta 標籤、Sitemap、Robots.txt、Favicon
+Necessary:
+
+- [ ] Meta Tags, Open Graph
+
+Optional:
+
 - [ ] 文章 TOC
 - [ ] 《關於我》頁面補充專案資訊
 - [ ] 全文搜尋功能
 - [ ] PWA 設定
 - [ ] 多國語系
-- [ ] 補上 Unit Testing 與 E2E Testing
 
 ## 部署方式
 
