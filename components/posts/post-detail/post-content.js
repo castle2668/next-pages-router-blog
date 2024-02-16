@@ -7,6 +7,7 @@ import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import remarkGfm from 'remark-gfm';
 
 import classes from './post-content.module.scss';
 import PostHeader from './post-header';
@@ -70,6 +71,13 @@ const PostContent = (props) => {
         <code className={className}>{children}</code>
       );
     },
+    table(table) {
+      return (
+        <div style={{ overflowX: 'auto' }}>
+          <table>{table.children}</table>
+        </div>
+      );
+    },
   };
 
   return (
@@ -78,7 +86,9 @@ const PostContent = (props) => {
       <p className={classes.date}>
         <time>📆 {formattedDate}</time>
       </p>
-      <ReactMarkdown components={customRenderers}>{content}</ReactMarkdown>
+      <ReactMarkdown components={customRenderers} remarkPlugins={[remarkGfm]}>
+        {content}
+      </ReactMarkdown>
     </article>
   );
 };
