@@ -1,8 +1,5 @@
+import { slugify } from './helper';
 import { getAllPosts } from './posts-util';
-
-export const slugify = (str) => {
-  return str.replace(/\s+/g, '-').toLowerCase(); // e.g. 'Hello World' -> 'hello-world'
-};
 
 export const getAllTags = (posts) => {
   const tags = [];
