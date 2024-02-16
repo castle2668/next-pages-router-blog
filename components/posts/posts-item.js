@@ -2,11 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+import { slugify } from '@/utils/helper';
+
 import classes from './posts-item.module.scss';
 
 const PostsItem = (props) => {
   const { title, image, excerpt, date, slug, tags } = props.post;
-
   // April 14, 2023
   // const formattedDate = new Date(date).toLocaleDateString('en-US', {
   //   day: 'numeric',
@@ -28,7 +29,11 @@ const PostsItem = (props) => {
       {tags && (
         <div className={classes.tags}>
           {tags.map((tag) => (
-            <Link key={tag} href={`/tags/${tag}`} className={classes.tag}>
+            <Link
+              key={tag}
+              href={`/tags/${slugify(tag)}`}
+              className={classes.tag}
+            >
               {tag}
             </Link>
           ))}

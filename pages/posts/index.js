@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import React from 'react';
 
 import AllPosts from '@/components/posts/all-posts';
@@ -7,13 +7,12 @@ import { getPaginatedPosts } from '@/utils/posts-util';
 const AllPostsPage = (props) => {
   return (
     <>
-      <Head>
-        <title>All Posts</title>
-        <meta
-          name="description"
-          content="A list of all programming-related tutorials and posts!"
-        />
-      </Head>
+      <NextSeo
+        canonical="https://blog.eishou.dev/posts"
+        openGraph={{
+          url: 'https://blog.eishou.dev/posts',
+        }}
+      />
       <AllPosts
         posts={props.posts}
         currentPage={props.currentPage}
