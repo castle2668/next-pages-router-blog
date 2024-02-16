@@ -6,19 +6,14 @@
 - 留言板使用 MongoDB 作為存儲資料庫
 - 文章使用 `react-markdown` + `react-syntax-highlighter` + `gray-matter` 呈現
 - 透過 Vercel 部署
+- Meta Tags 與 Open Graph 使用 `next-seo` 協助生成
 
 ## 開發規範
 
 - 透過 VSCode Format Code Action 組合使用 ESLint + Prettier
 - ESLint 配置：`eslint` + `eslint-config-next` + `eslint-plugin-simple-import-sort`
 
-## 待辦清單
-
-必須完成：
-
-- [ ] Meta Tags, Open Graph
-
-進階功能：
+## 願望清單
 
 - [ ] 文章 TOC
 - [ ] 《關於我》頁面補充專案資訊
