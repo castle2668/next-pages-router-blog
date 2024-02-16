@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import React from 'react';
 
 import ArchivesList from '@/components/archives-page/archives-list';
@@ -6,15 +6,17 @@ import { getArchives } from '@/utils/archives-util';
 
 const ArchivesPage = (props) => {
   const { posts } = props;
+
   return (
     <>
-      <Head>
-        <title>Archives</title>
-        <meta
-          name="description"
-          content="I post about programming and web development."
-        />
-      </Head>
+      <NextSeo
+        title="Archives | Shou's Blog"
+        canonical="https://blog.eishou.dev/archives"
+        openGraph={{
+          url: 'https://blog.eishou.dev/archives',
+          title: "Archives | Shou's Blog",
+        }}
+      />
       <ArchivesList posts={posts} count={posts.length} />
     </>
   );

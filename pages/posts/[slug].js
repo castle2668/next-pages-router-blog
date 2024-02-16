@@ -1,16 +1,23 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import React from 'react';
 
 import PostContent from '@/components/posts/post-detail/post-content';
 import { getPostData, getPostsFiles } from '@/utils/posts-util';
 
 const PostDetailPage = (props) => {
+  console.log(props);
   return (
     <>
-      <Head>
-        <title>{props.post.title}</title>
-        <meta name="description" content={props.post.excerpt} />
-      </Head>
+      <NextSeo
+        title={`${props.post.title} | Shou's Blog`}
+        description={props.post.excerpt}
+        canonical={`https://blog.eishou.dev/posts/${props.post.slug}`}
+        openGraph={{
+          url: `https://blog.eishou.dev/posts/${props.post.slug}`,
+          title: `${props.post.title} | Shou's Blog`,
+          description: props.post.excerpt,
+        }}
+      />
       <PostContent post={props.post} />
     </>
   );

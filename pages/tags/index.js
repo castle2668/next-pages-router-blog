@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import React from 'react';
 
 import AllTags from '@/components/tags/all-tags';
@@ -10,13 +10,14 @@ const AllTagsPage = (props) => {
 
   return (
     <>
-      <Head>
-        <title>標籤列表</title>
-        <meta
-          name="description"
-          content="I post about programming and web development."
-        />
-      </Head>
+      <NextSeo
+        title="標籤列表 | Shou's Blog"
+        canonical="https://blog.eishou.dev/tags"
+        openGraph={{
+          url: 'https://blog.eishou.dev/tags',
+          title: "標籤列表 | Shou's Blog",
+        }}
+      />
       <AllTags tags={tags} />
     </>
   );
