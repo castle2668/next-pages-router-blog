@@ -118,4 +118,14 @@
       font-size: 16px;
     }
   }
+
+  table,
+  tr,
+  td,
+  th {
+    border: 1px solid #555;
+    border-collapse: collapse;
+    padding: 8px;
+    min-width: 100px;
+  }
 }
