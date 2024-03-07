@@ -1,8 +1,8 @@
 ---
-title: "Redux Toolkit with Action Creator Thunk"
-excerpt: "本文介紹 Redux Toolkit 當中的 Action Creator Thunk 設計，透過 Thunk 幫助我們更好地處理非同步邏輯。"
-tags: ["React", "Redux", "Redux Toolkit"]
-date: "2022-03-18"
+title: 'Redux Toolkit with Action Creator Thunk'
+excerpt: '本文介紹 Redux Toolkit 當中的 Action Creator Thunk 設計，透過 Thunk 幫助我們更好地處理非同步邏輯。'
+tags: ['React', 'Redux', 'Redux Toolkit']
+date: '2022-03-18'
 ---
 
 ## Asynchronous code 在 Redux 中的問題
@@ -45,22 +45,22 @@ export const sendCartData = (cart) => {
     // We wanna do something before dispatching...
     dispatch(
       uiActions.showNotification({
-        status: "pending",
-        title: "Sending...",
-        message: "Sending cart data!",
-      })
+        status: 'pending',
+        title: 'Sending...',
+        message: 'Sending cart data!',
+      }),
     );
 
     const sendRequest = async () => {
       const response = await fetch(
-        "https://react-http-14f5a-default-rtdb.firebaseio.com/cart.json",
+        'https://react-http-14f5a-default-rtdb.firebaseio.com/cart.json',
         {
-          method: "PUT",
+          method: 'PUT',
           body: JSON.stringify(cart),
-        }
+        },
       );
       if (!response.ok) {
-        throw new Error("Sending cart data failed.");
+        throw new Error('Sending cart data failed.');
       }
     };
 
@@ -68,18 +68,18 @@ export const sendCartData = (cart) => {
       await sendRequest();
       dispatch(
         uiActions.showNotification({
-          status: "success",
-          title: "Success!",
-          message: "Sent cart data successfully!",
-        })
+          status: 'success',
+          title: 'Success!',
+          message: 'Sent cart data successfully!',
+        }),
       );
     } catch (error) {
       dispatch(
         uiActions.showNotification({
-          status: "error",
-          title: "Error!",
-          message: "Sending cart data failed!",
-        })
+          status: 'error',
+          title: 'Error!',
+          message: 'Sending cart data failed!',
+        }),
       );
     }
   };

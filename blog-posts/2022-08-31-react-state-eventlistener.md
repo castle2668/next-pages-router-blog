@@ -1,8 +1,8 @@
 ---
-title: "為什麼 React State 在 Event Listener 中沒有正確更新"
-excerpt: "最近在使用 Ant Design 的 Table 元件時，想要監聽 Scroll 事件去更改呈現的欄位，但是發現 State 成功更新後，Table 所使用的 State 卻沒有跟著更新，這到底是怎麼回事哩。"
-tags: ["React", "Ant Design"]
-date: "2022-08-31"
+title: '為什麼 React State 在 Event Listener 中沒有正確更新'
+excerpt: '最近在使用 Ant Design 的 Table 元件時，想要監聽 Scroll 事件去更改呈現的欄位，但是發現 State 成功更新後，Table 所使用的 State 卻沒有跟著更新，這到底是怎麼回事哩。'
+tags: ['React', 'Ant Design']
+date: '2022-08-31'
 ---
 
 ## 應該盡量使用 JSX 處理事件
@@ -71,12 +71,12 @@ useEffect(() => {
       setCols(newColumns);
     }
   };
-  const tableBodyEl = document.querySelector(".ant-table-body");
-  tableBodyEl.addEventListener("scroll", scrollEvent);
+  const tableBodyEl = document.querySelector('.ant-table-body');
+  tableBodyEl.addEventListener('scroll', scrollEvent);
 
   // Avoid Memory Leaks
   return () => {
-    tableBodyEl.removeEventListener("scroll", scrollEvent);
+    tableBodyEl.removeEventListener('scroll', scrollEvent);
   };
 
   // React State cannot attach to EventListener, so we need to attach the listener again when the state changes

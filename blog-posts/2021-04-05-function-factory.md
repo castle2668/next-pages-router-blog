@@ -1,8 +1,8 @@
 ---
-title: "Understand JavaScript #16 函式工廠 (Function Factory)"
-excerpt: "本文主要內容為探討「函式工廠」的相關知識。閉包有很多有用的地方，像是函式工廠就是用閉包建立的模式，文章內容也會包含重載函式、一級函式、執行環境等概念。"
-tags: ["JavaScript"]
-date: "2021-04-05"
+title: 'Understand JavaScript #16 函式工廠 (Function Factory)'
+excerpt: '本文主要內容為探討「函式工廠」的相關知識。閉包有很多有用的地方，像是函式工廠就是用閉包建立的模式，文章內容也會包含重載函式、一級函式、執行環境等概念。'
+tags: ['JavaScript']
+date: '2021-04-05'
 ---
 
 ## 重載函式 (Function Overloading)
@@ -15,17 +15,17 @@ date: "2021-04-05"
 
 ```javascript
 function greet(firstname, lastname, language) {
-  language = language || "en";
-  if (language === "en") {
+  language = language || 'en';
+  if (language === 'en') {
     console.log(`Hello ${firstname} ${lastname}`);
   }
-  if (language === "es") {
+  if (language === 'es') {
     console.log(`Hola ${firstname} ${lastname}`);
   }
 }
 
-greet("Sealman", "Huang", "en");
-greet("Sealman", "Huang", "es");
+greet('Sealman', 'Huang', 'en');
+greet('Sealman', 'Huang', 'es');
 ```
 
 我們可以再加強以上寫法，使用類似重載函式的寫法，讓函式不用傳入這麼多資訊。
@@ -34,15 +34,15 @@ greet("Sealman", "Huang", "es");
 
 ```javascript
 function greetEnglish(firstname, lastname) {
-  greet(firstname, lastname, "en");
+  greet(firstname, lastname, 'en');
 }
 
 function greetSpanish(firstname, lastname) {
-  greet(firstname, lastname, "es");
+  greet(firstname, lastname, 'es');
 }
 
-greetEnglish("Sealman", "Huang");
-greetSpanish("Sealman", "Huang");
+greetEnglish('Sealman', 'Huang');
+greetSpanish('Sealman', 'Huang');
 ```
 
 這種類似重載函式的寫法是一個在 JavaScript 中比較簡單的模式，可以幫助我們更清楚地瞭解每個函式的用途，接下來我們以此為基礎，進階到函式工廠這個設計模式。
@@ -58,20 +58,20 @@ greetSpanish("Sealman", "Huang");
 ```javascript
 function makeGreeting(language) {
   return function (firstname, lastname) {
-    if (language === "en") {
+    if (language === 'en') {
       console.log(`Hello ${firstname} ${lastname}`);
     }
-    if (language === "es") {
+    if (language === 'es') {
       console.log(`Hola ${firstname} ${lastname}`);
     }
   };
 }
 
-var greetEnglish = makeGreeting("en");
-var greetSpanish = makeGreeting("es");
+var greetEnglish = makeGreeting('en');
+var greetSpanish = makeGreeting('es');
 
-greetEnglish("Sealman", "Huang");
-greetSpanish("Sealman", "Huang");
+greetEnglish('Sealman', 'Huang');
+greetSpanish('Sealman', 'Huang');
 ```
 
 接著我們執行了兩次 `makeGreeting`，雖然這是同一個函式（詞彙環境相同），但是執行兩次就會產生兩個不同的**執行環境**，因此產生的兩個變數 `language` 的**記憶體位址**是不同的。

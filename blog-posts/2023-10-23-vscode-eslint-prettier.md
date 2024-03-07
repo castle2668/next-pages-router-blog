@@ -1,7 +1,7 @@
 ---
 title: 'Using Prettier and ESLint to automate formatting and fixing JavaScript'
 date: '2023-10-23'
-excerpt: 近一兩年專案都是使用這套 Linter 與 Formatter 的組合拳，IDE 使用 VS Code 的話歡迎參考看看。
+excerpt: '近一兩年專案都是使用這套 Linter 與 Formatter 的組合拳，IDE 使用 VS Code 的話歡迎參考看看。'
 tags: ['ESLint', 'Prettier']
 ---
 

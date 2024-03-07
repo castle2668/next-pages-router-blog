@@ -1,8 +1,8 @@
 ---
-title: "JavaScript var & let & const 的特點與差異"
-excerpt: "本篇文章介紹 JavaScript ES6 裡面 let 與 const 的重要觀念，以及使用上的注意事項。"
-tags: ["JavaScript"]
-date: "2019-10-28"
+title: 'JavaScript var & let & const 的特點與差異'
+excerpt: '本篇文章介紹 JavaScript ES6 裡面 let 與 const 的重要觀念，以及使用上的注意事項。'
+tags: ['JavaScript']
+date: '2019-10-28'
 ---
 
 ## ES5 var & window
@@ -87,11 +87,11 @@ console.log(a); // 結果為 0
 
 ```javascript
 // Javascript
-const listLength = document.querySelectorAll(".list li").length;
+const listLength = document.querySelectorAll('.list li').length;
 for (var i = 0; i < listLength; i++) {
   document
-    .querySelectorAll(".list li")
-    [i].addEventListener("click", function () {
+    .querySelectorAll('.list li')
+    [i].addEventListener('click', function () {
       alert(i + 1);
     });
 }
@@ -106,11 +106,11 @@ for (var i = 0; i < listLength; i++) {
 由於 Block Scope 的作用，讓 For 迴圈每次執行時，裡面的 `let i` 都可以存活在個別的「大括號作用域」裡面，所以彼此執行的內容不像 var 一樣會被干擾。
 
 ```javascript
-const listLength = document.querySelectorAll(".list li").length;
+const listLength = document.querySelectorAll('.list li').length;
 for (let i = 0; i < listLength; i++) {
   document
-    .querySelectorAll(".list li")
-    [i].addEventListener("click", function () {
+    .querySelectorAll('.list li')
+    [i].addEventListener('click', function () {
       alert(i + 1); // 用 let 的話，會在大括號區塊內重新綁定
     });
 }
@@ -137,10 +137,10 @@ for (let i = 0; i < listLength; i++) {
 
 ```javascript
 const obj = {
-  url: "https://sealman.com",
+  url: 'https://sealman.com',
 };
 Object.freeze(obj); // 使用 freeze 就不能修正了
-obj.url = "30";
+obj.url = '30';
 console.log(obj.url); // 30 -> https://sealman.com
 ```
 

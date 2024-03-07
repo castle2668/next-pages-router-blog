@@ -1,8 +1,8 @@
 ---
-title: "React Router V6 - Fetch data with Loader"
-excerpt: "上一篇介紹了 React Router V6 的基本架構，包含導頁、動態路由與巢狀路由，本文則會介紹 V6 全新的重要功能 Loader。"
-tags: ["React", "React Router"]
-date: "2023-03-31"
+title: 'React Router V6 - Fetch data with Loader'
+excerpt: '上一篇介紹了 React Router V6 的基本架構，包含導頁、動態路由與巢狀路由，本文則會介紹 V6 全新的重要功能 Loader。'
+tags: ['React', 'React Router']
+date: '2023-03-31'
 ---
 
 ## New Feature - Loader
@@ -24,18 +24,18 @@ date: "2023-03-31"
 ```jsx
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     children: [
       {
-        path: "events",
+        path: 'events',
         element: <EventRootLayout />,
         children: [
           {
             index: true,
             element: <Events />,
             loader: async () => {
-              const response = await fetch("http://localhost:8080/events");
+              const response = await fetch('http://localhost:8080/events');
               if (!response.ok) {
                 // Handle Error...
               } else {
@@ -73,7 +73,7 @@ export default EventsPage;
 export default EventsPage;
 
 export const loader = async () => {
-  const response = await fetch("http://localhost:8080/events");
+  const response = await fetch('http://localhost:8080/events');
   if (!response.ok) {
     // Handle Error...
   } else {
@@ -86,16 +86,16 @@ export const loader = async () => {
 定義好 Loader 後，將元件裡面定義的 `loader` 通過 `import` 引入進來，並且可以使用 alias 定義不同頁面元件所使用的 Loader 名稱，常見的命名方式為 `Events` 頁面就叫做 `eventsLoader`。
 
 ```jsx
-import Events, { loader as eventsLoader } from "./pages/Events";
+import Events, { loader as eventsLoader } from './pages/Events';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     children: [
       ,
       {
-        path: "events",
+        path: 'events',
         element: <EventRootLayout />,
         children: [
           {
@@ -132,7 +132,7 @@ const RootLayout = () => {
     <>
       <MainNavigation />
       <main>
-        {navigation.state === "loading" && <p>Loading...</p>}
+        {navigation.state === 'loading' && <p>Loading...</p>}
         <Outlet />
       </main>
     </>
@@ -153,13 +153,13 @@ const RootLayout = () => {
 ```jsx
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     errorElement: <Error />, // catch any errors
     children: [
       { index: true, element: <Home /> },
       {
-        path: "events",
+        path: 'events',
         element: <EventRootLayout />,
         children: [
           {
@@ -189,9 +189,9 @@ const EventsPage = () => {
 export default EventsPage;
 
 export const loader = async () => {
-  const response = await fetch("http://localhost:8080/events");
+  const response = await fetch('http://localhost:8080/events');
   if (!response.ok) {
-    throw new Response(JSON.stringify({ message: "Could not fetch events" }), {
+    throw new Response(JSON.stringify({ message: 'Could not fetch events' }), {
       status: 500,
     });
   } else {
@@ -210,8 +210,8 @@ export const loader = async () => {
 const Error = () => {
   const error = useRouteError();
 
-  let title = "Oops!";
-  let message = "Sorry, an unexpected error has occurred.";
+  let title = 'Oops!';
+  let message = 'Sorry, an unexpected error has occurred.';
 
   // API Error
   if (error.status === 500) {
@@ -220,8 +220,8 @@ const Error = () => {
 
   // Path Error
   if (error.status === 404) {
-    title = "Not Found!";
-    message = "Could not find resource or page.";
+    title = 'Not Found!';
+    message = 'Could not find resource or page.';
   }
 
   return (
@@ -246,12 +246,12 @@ const Error = () => {
 // Events.js
 
 export const loader = async () => {
-  const response = await fetch("http://localhost:8080/events22");
+  const response = await fetch('http://localhost:8080/events22');
   if (!response.ok) {
     // throw new Response(JSON.stringify({ message: "Could not fetch events" }), {
     //   status: 500,
     // });
-    throw json({ message: "Could not fetch events" }, { status: 500 });
+    throw json({ message: 'Could not fetch events' }, { status: 500 });
   } else {
     return response;
   }
@@ -288,7 +288,7 @@ export const loader = async ({ request, params }) => {
   const response = await fetch(`http://localhost:8080/events/${id}`);
   if (!response.ok) {
     throw json(
-      { message: "Could not fetch details for the selected event" },
+      { message: 'Could not fetch details for the selected event' },
       {
         status: 500,
       },
@@ -312,22 +312,22 @@ export const loader = async ({ request, params }) => {
 ```jsx
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     children: [
       {
-        path: "events",
+        path: 'events',
         element: <EventRootLayout />,
         children: [
           {
-            path: ":eventId",
-            id: "event-detail", // 記得加上 ID
+            path: ':eventId',
+            id: 'event-detail', // 記得加上 ID
             loader: eventDetailLoader, // 共用的 Loader
             children: [
               {
                 index: true,
                 element: <EventDetail />,
               },
-              { path: "edit", element: <EditEvent /> },
+              { path: 'edit', element: <EditEvent /> },
             ],
           },
         ],
@@ -344,14 +344,14 @@ const router = createBrowserRouter([
 ```jsx
 // EventDetail.js
 const EventDetail = () => {
-  const data = useRouteLoaderData("event-detail");
+  const data = useRouteLoaderData('event-detail');
 
   return <EventItem event={data.event} />;
 };
 
 // EditEvent.js
 const EditEvent = () => {
-  const data = useRouteLoaderData("event-detail");
+  const data = useRouteLoaderData('event-detail');
 
   return (
     <>

@@ -57,3 +57,8 @@ export const getArchives = () => {
   const postsByYear = groupByYear(postsWithMonth);
   return postsByYear;
 };
+
+export const getPostsCount = () => {
+  const allPosts = getAllPosts();
+  return allPosts.length;
+};

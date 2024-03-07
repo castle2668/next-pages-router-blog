@@ -1,8 +1,8 @@
 ---
-title: "升級 React Router v6 筆記"
-excerpt: "本文為 React Router 升級第 6 版的筆記。"
-tags: ["React", "React Router"]
-date: "2022-04-08"
+title: '升級 React Router v6 筆記'
+excerpt: '本文為 React Router 升級第 6 版的筆記。'
+tags: ['React', 'React Router']
+date: '2022-04-08'
 ---
 
 ## React Router v6 Changelog
@@ -150,7 +150,7 @@ const Welcome = () => {
 
 ```jsx
 <NavLink
-  className={(navData) => (navData.isActive ? classes.active : "")}
+  className={(navData) => (navData.isActive ? classes.active : '')}
   to="/welcome"
 >
   Welcome
@@ -188,10 +188,10 @@ V6 則更換成 `<Navigate>` 元件。
 
 ```javascript
 const navigate = useNavigate();
-navigate("/welcome");
+navigate('/welcome');
 
 // 如果要用 Redirect 也就是 Replace 的話，可以加上第二個參數
-navigate("/welcome", { replace: true });
+navigate('/welcome', { replace: true });
 
 // 單純加上 -1，表示回到上一頁
 navigate(-1);
@@ -211,11 +211,11 @@ navigate(1);
 // 支援物件形式
 navigate({
   pathname: `${location.pathname}`,
-  search: `?sort=${isSortingAscending ? "desc" : "asc"}`,
+  search: `?sort=${isSortingAscending ? 'desc' : 'asc'}`,
 });
 
 // createSearchParams
-const params = { sort: isSortingAscending ? "desc" : "asc" };
+const params = { sort: isSortingAscending ? 'desc' : 'asc' };
 navigate({
   pathname: location.pathname,
   search: `?${createSearchParams(params)}`,
@@ -243,7 +243,7 @@ navigate({
 
 ```jsx
 // import NewQuote from './pages/NewQuote';
-const NewQuote = React.lazy(() => import("./pages/NewQuote"));
+const NewQuote = React.lazy(() => import('./pages/NewQuote'));
 ```
 
 完成後回到頁面，會發現頁面顯示有錯誤。這是因為我們把檔案拆分成 chunks 之後，如我們所願 React Router 進行了延遲加載，但是 React 卻也因此無法順利進行渲染的工作而導致 React 報錯。
@@ -253,10 +253,10 @@ const NewQuote = React.lazy(() => import("./pages/NewQuote"));
 範例：將 Lazy Loading 應用在各個需要的頁面上
 
 ```jsx
-const AllQuotes = React.lazy(() => import("./pages/AllQuotes"));
-const NewQuote = React.lazy(() => import("./pages/NewQuote"));
-const QuoteDetail = React.lazy(() => import("./pages/QuoteDetail"));
-const NotFound = React.lazy(() => import("./pages/NotFound"));
+const AllQuotes = React.lazy(() => import('./pages/AllQuotes'));
+const NewQuote = React.lazy(() => import('./pages/NewQuote'));
+const QuoteDetail = React.lazy(() => import('./pages/QuoteDetail'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (

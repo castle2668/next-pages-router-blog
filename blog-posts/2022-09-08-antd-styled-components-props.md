@@ -1,8 +1,8 @@
 ---
-title: "為什麼在 Ant Design 使用 styled-components 傳遞 Boolean Props 會出現警告"
-excerpt: "最近要使用 styled-components 包裝 Ant Design 的元件時，想透過傳遞 Boolean 值的 props 來製作動態樣式，結果是成功了但是卻一直跳出警告訊息，這是為什麼呢？"
-tags: ["React", "Ant Design", "Styled Components"]
-date: "2022-09-08"
+title: '為什麼在 Ant Design 使用 styled-components 傳遞 Boolean Props 會出現警告'
+excerpt: '最近要使用 styled-components 包裝 Ant Design 的元件時，想透過傳遞 Boolean 值的 props 來製作動態樣式，結果是成功了但是卻一直跳出警告訊息，這是為什麼呢？'
+tags: ['React', 'Ant Design', 'Styled Components']
+date: '2022-09-08'
 ---
 
 ## 警告訊息範例
@@ -14,7 +14,7 @@ date: "2022-09-08"
 ```jsx
 const StyledButton = styled(Button)`
   color: palevioletred;
-  font-weight: ${(props) => (props.primary ? "bold" : "normal")};
+  font-weight: ${(props) => (props.primary ? 'bold' : 'normal')};
 `;
 
 const App = () => {
@@ -56,11 +56,11 @@ const App = () => {
 
 const StyledButton = styled(Button)`
   color: palevioletred;
-  font-weight: ${(props) => (props.primary === "true" ? "bold" : "normal")};
+  font-weight: ${(props) => (props.primary === 'true' ? 'bold' : 'normal')};
 `;
 
 const App = () => {
-  const [isPrimary, setIsPrimary] = useState("true");
+  const [isPrimary, setIsPrimary] = useState('true');
 
   return (
     <div>
@@ -84,7 +84,7 @@ Transient props 的作用就是「防止」被 styled-components 使用的 props
 
 const StyledButton = styled(Button)`
   color: palevioletred;
-  font-weight: ${(props) => (props.$primary ? "bold" : "normal")};
+  font-weight: ${(props) => (props.$primary ? 'bold' : 'normal')};
 `;
 
 const App = () => {
