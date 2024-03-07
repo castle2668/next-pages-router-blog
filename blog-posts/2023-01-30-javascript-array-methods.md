@@ -1,8 +1,8 @@
 ---
-title: "The JavaScript Array Methods Handbook"
-excerpt: "健忘的海豹人常常需要查看的陣列處理方法小抄。"
-tags: ["JavaScript"]
-date: "2023-01-30"
+title: 'The JavaScript Array Methods Handbook'
+excerpt: '健忘的海豹人常常需要查看的陣列處理方法小抄。'
+tags: ['JavaScript']
+date: '2023-01-30'
 ---
 
 ## What will this method return
@@ -21,7 +21,7 @@ date: "2023-01-30"
 將陣列裡的每個元素傳入，並「執行」給定的函式一次。
 
 ```javascript
-const array1 = ["a", "b", "c"];
+const array1 = ['a', 'b', 'c'];
 
 array1.forEach((element) => console.log(element));
 
@@ -53,7 +53,7 @@ console.log(result);
 原陣列經過指定的函式「過濾」後，回傳新的結果陣列。
 
 ```javascript
-const words = ["Sean", "Sunny", "Paul", "Iris", "Julia"];
+const words = ['Sean', 'Sunny', 'Paul', 'Iris', 'Julia'];
 
 const result = words.filter((word) => word.length > 4);
 
@@ -68,8 +68,8 @@ console.log(result);
 > [Array.prototype.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
 ```javascript
-const array1 = ["a", "b", "c"];
-const array2 = ["d", "e", "f", "g"];
+const array1 = ['a', 'b', 'c'];
+const array2 = ['d', 'e', 'f', 'g'];
 const array3 = array1.concat(array2);
 
 console.log(array3);
@@ -115,12 +115,12 @@ console.log(array1.every(areEven));
 回傳陣列是否「包含」指定的元素。
 
 ```javascript
-const pets = ["cat", "dog"];
+const pets = ['cat', 'dog'];
 
-console.log(pets.includes("cat"));
+console.log(pets.includes('cat'));
 // Expected output: true
 
-console.log(pets.includes("pig"));
+console.log(pets.includes('pig'));
 // Expected output: false
 ```
 
@@ -161,16 +161,16 @@ console.log(array1.findIndex(isLargeNumber));
 回傳「指定的元素」在陣列中「第一個」被找到的「索引」，如果找不到則回傳 `-1`。
 
 ```javascript
-const beasts = ["squirrel", "seal", "cat", "duck", "rabbit"];
+const beasts = ['squirrel', 'seal', 'cat', 'duck', 'rabbit'];
 
-console.log(beasts.indexOf("squirrel"));
+console.log(beasts.indexOf('squirrel'));
 // Expected output: 0
 
 // Start from index 2
-console.log(beasts.indexOf("seal", 2));
+console.log(beasts.indexOf('seal', 2));
 // Expected output: 4
 
-console.log(beasts.indexOf("pig"));
+console.log(beasts.indexOf('pig'));
 // Expected output: -1
 ```
 

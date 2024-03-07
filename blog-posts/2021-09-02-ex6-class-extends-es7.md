@@ -1,8 +1,8 @@
 ---
-title: "ES6 Class & Extends 與 ES7 現代寫法"
-excerpt: "本文介紹 ES6 Class 實體與繼承的概念，以及進入 ES7 後出現的簡化寫法。"
-tags: ["JavaScript"]
-date: "2021-09-02"
+title: 'ES6 Class & Extends 與 ES7 現代寫法'
+excerpt: '本文介紹 ES6 Class 實體與繼承的概念，以及進入 ES7 後出現的簡化寫法。'
+tags: ['JavaScript']
+date: '2021-09-02'
 ---
 
 ## Class
@@ -18,11 +18,11 @@ date: "2021-09-02"
 ```jsx
 class Person {
   constructor() {
-    this.name = "Sean";
+    this.name = 'Sean';
   }
 
   printName() {
-    console.log("My name is ", this.name);
+    console.log('My name is ', this.name);
   }
 }
 
@@ -39,7 +39,7 @@ Sean.printName(); // "My name is Sean"
 ```jsx
 class Human {
   constructor() {
-    this.gender = "female";
+    this.gender = 'female';
   }
   printGender() {
     console.log(`My gender is ${this.gender}`);
@@ -49,8 +49,8 @@ class Human {
 class Person extends Human {
   constructor() {
     super();
-    this.name = "Sean";
-    this.gender = "male";
+    this.name = 'Sean';
+    this.gender = 'male';
   }
   printName() {
     console.log(`My name is ${this.name}`);
@@ -72,7 +72,7 @@ ES7 的 Class 將方法寫成了一個**儲存值為函式的屬性**，寫法�
 
 ```jsx
 class Human {
-  gender = "female";
+  gender = 'female';
 
   printGender = () => {
     console.log(`My gender is ${this.gender}`);
@@ -80,8 +80,8 @@ class Human {
 }
 
 class Person extends Human {
-  name = "Sean";
-  gender = "male";
+  name = 'Sean';
+  gender = 'male';
 
   printName = () => {
     console.log(`My name is ${this.name}`);

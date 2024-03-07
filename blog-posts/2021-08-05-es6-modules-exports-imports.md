@@ -1,8 +1,8 @@
 ---
-title: "ES6 Modules - Exports & Imports"
-excerpt: "在現代前端當中，模組化是相當推薦而且實用的做法，為了要存取其他模組，我們需要透過 export 讓模組可以被引用，並使用 import 來存取模組。"
-tags: ["JavaScript"]
-date: "2021-08-05"
+title: 'ES6 Modules - Exports & Imports'
+excerpt: '在現代前端當中，模組化是相當推薦而且實用的做法，為了要存取其他模組，我們需要透過 export 讓模組可以被引用，並使用 import 來存取模組。'
+tags: ['JavaScript']
+date: '2021-08-05'
 ---
 
 ## Default Export
@@ -11,7 +11,7 @@ date: "2021-08-05"
 
 ```jsx
 const person = {
-  name: "Max",
+  name: 'Max',
 };
 
 export default person;
@@ -22,8 +22,8 @@ export default person;
 導入透過 `default` 關鍵字導出的資料時，因為只有導出預設的一個變數資料，所以**導入時可以任意更改名稱**。
 
 ```jsx
-import person from "./person.js";
-import prs from "./person.js";
+import person from './person.js';
+import prs from './person.js';
 ```
 
 ## Named Export
@@ -45,11 +45,11 @@ export const baseData = 10;
 
 ```jsx
 // Import a single export from a module
-import { clean } from "./utility.js";
-import { baseData } from "./utility.js";
+import { clean } from './utility.js';
+import { baseData } from './utility.js';
 
 // Import multiple exports from module
-import { clean, baseData } from "./utility.js";
+import { clean, baseData } from './utility.js';
 ```
 
 ### 引入時重新命名 (Assign an alias)
@@ -60,10 +60,10 @@ import { clean, baseData } from "./utility.js";
 
 ```jsx
 // Rename an export when importing it
-import { clean as Cleaning } from "./utility.js";
+import { clean as Cleaning } from './utility.js';
 
 // Rename multiple exports during import
-import { clean as Clean, baseData as BaseData } from "./utility.js";
+import { clean as Clean, baseData as BaseData } from './utility.js';
 ```
 
 ### 引入整個導出的模塊 (Import an entire module's contents)
@@ -71,7 +71,7 @@ import { clean as Clean, baseData as BaseData } from "./utility.js";
 使用 `*` 特殊字符導入所有內容，此時的 `bundled` 會是一個物件，並且可以透過 `bundled.clean`或是 `bundled.baseData` 等方式取用資料。
 
 ```jsx
-import * as bundled from "./utility.js";
+import * as bundled from './utility.js';
 ```
 
 ## Recap

@@ -1,8 +1,8 @@
 ---
-title: "使用 vue-tribute 實作標記功能"
-excerpt: "這篇文章主要說明如何透過 vue-tribute 來實作網頁上的標記功能（@mention），先備知識必須要已經基本會使用 Vue。"
-tags: ["Vue", "JavaScript", "HTML"]
-date: "2020-07-19"
+title: '使用 vue-tribute 實作標記功能'
+excerpt: '這篇文章主要說明如何透過 vue-tribute 來實作網頁上的標記功能（@mention），先備知識必須要已經基本會使用 Vue。'
+tags: ['Vue', 'JavaScript', 'HTML']
+date: '2020-07-19'
 ---
 
 ## 開始使用 vue-tribute
@@ -103,7 +103,7 @@ if (arr) {
 // 將 @mention 轉為 twitter.com/mention 帳號的 Link
 const replaceContent = content.replace(
   /\B@([a-z0-9_-]+)/gi, // 可位於開頭 or 左右有空格，可包含 _ 與 - 符號
-  '<a href="http://twitter.com/$1">@$1</a>'
+  '<a href="http://twitter.com/$1">@$1</a>',
 );
 ```
 
@@ -143,7 +143,7 @@ function setEndOfContenteditable(contentEditableElement) {
 接著，我們透過 `setEndOfContenteditable` 觸發整個方法，完成將游標移動到最後面的功能。
 
 ```javascript
-const elem = document.querySelector(".input-area");
+const elem = document.querySelector('.input-area');
 this.setEndOfContenteditable(elem); // 游標移到最後面
 ```
 
@@ -154,10 +154,10 @@ this.setEndOfContenteditable(elem); // 游標移到最後面
 在 [Javascript trick for \'paste as plain text\` in execCommand - Stack Overflow](https://stackoverflow.com/a/12028136/13594832) 這個問題串的最佳解答，算是比起另一個網路上的熱門答案更簡單、更好理解，且不容易出現 Bug 的寫法。
 
 ```javascript
-editor.addEventListener("paste", function (e) {
+editor.addEventListener('paste', function (e) {
   e.preventDefault();
-  var text = (e.originalEvent || e).clipboardData.getData("text/plain");
-  document.execCommand("insertHTML", false, text);
+  var text = (e.originalEvent || e).clipboardData.getData('text/plain');
+  document.execCommand('insertHTML', false, text);
 });
 ```
 

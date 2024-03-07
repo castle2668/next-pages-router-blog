@@ -1,8 +1,8 @@
 ---
-title: "Debouncing with useCallback Hook"
-excerpt: "本文介紹 React 當中 useCallback 這個 Hook 的使用概念，並且結合 Lodash 實作 Debouncing Search 的功能幫助理解 useCallback 的作用。"
-tags: ["React", "Lodash"]
-date: "2022-10-11"
+title: 'Debouncing with useCallback Hook'
+excerpt: '本文介紹 React 當中 useCallback 這個 Hook 的使用概念，並且結合 Lodash 實作 Debouncing Search 的功能幫助理解 useCallback 的作用。'
+tags: ['React', 'Lodash']
+date: '2022-10-11'
 ---
 
 ## ⚓ useCallback Hook
@@ -64,7 +64,7 @@ const debouncedSearch = useRef(
   debounce(async (params) => {
     await doSearch(params);
   }, 1000),
-  []
+  [],
 ).current;
 ```
 
@@ -77,7 +77,7 @@ const debouncedSearch = useCallback(
   debounce(async (params) => {
     await doSearch(params);
   }, 1000),
-  []
+  [],
 );
 ```
 

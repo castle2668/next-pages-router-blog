@@ -1,8 +1,8 @@
 ---
-title: "瞭解 React Router V5 基礎知識"
-excerpt: "現代前端開發常見的 SPA 是指頁面 URL 切換時，不必重新 Fetch 新的 HTML 檔案，且會阻止瀏覽器的默認行為，直接去更新畫面上的內容。在 React 技術線當中，可以藉由 React Router 幫助我們完成 SPA 下的頁面切換，根據 Route 的更改呈現出不同的組件。"
-tags: ["React", "React Router"]
-date: "2022-04-04"
+title: '瞭解 React Router V5 基礎知識'
+excerpt: '現代前端開發常見的 SPA 是指頁面 URL 切換時，不必重新 Fetch 新的 HTML 檔案，且會阻止瀏覽器的默認行為，直接去更新畫面上的內容。在 React 技術線當中，可以藉由 React Router 幫助我們完成 SPA 下的頁面切換，根據 Route 的更改呈現出不同的組件。'
+tags: ['React', 'React Router']
+date: '2022-04-04'
 ---
 
 ## 前言
@@ -238,7 +238,7 @@ const params = useParams();
 
 ```jsx
 // ourdomain.com/products/p1
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
   const params = useParams();
@@ -263,12 +263,12 @@ const ProductDetail = () => {
 
 ```jsx
 history.push(
-  `${location.pathname}?sort=${isSortingAscending ? "desc" : "asc"}`
+  `${location.pathname}?sort=${isSortingAscending ? 'desc' : 'asc'}`,
 );
 
 history.push({
   pathname: `${location.pathname}`,
-  search: `?sort=${isSortingAscending ? "desc" : "asc"}`,
+  search: `?sort=${isSortingAscending ? 'desc' : 'asc'}`,
 });
 ```
 
@@ -282,7 +282,7 @@ history.push({
 // 載入頁面後取得排序方式，得到排序後的資料
 const location = useLocation();
 const queryParams = new URLSearchParams(location.search);
-const isSortingAscending = queryParams.get("sort") === "asc";
+const isSortingAscending = queryParams.get('sort') === 'asc';
 // sortQuotes (Sorting Helper) 的詳細寫法這裡省略
 const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
 
@@ -291,7 +291,7 @@ const history = useHistory();
 const changeSortingHandler = () => {
   // history.push('/quotes?sort=' + (isSortingAscending ? 'desc' : 'asc'));
   history.push(
-    `${location.pathname}?sort=${isSortingAscending ? "desc" : "asc"}`
+    `${location.pathname}?sort=${isSortingAscending ? 'desc' : 'asc'}`,
   );
 };
 ```
@@ -354,7 +354,7 @@ console.log(match);
 ```jsx
 <Prompt
   when={isEntering}
-  message={(location) => "Are you sure you want to leave"}
+  message={(location) => 'Are you sure you want to leave'}
 />
 ```
 

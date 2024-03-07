@@ -1,8 +1,8 @@
 ---
-title: "React Router V6 - Setup Routes"
-excerpt: "React Router 團隊最近又來一次全面升級，新增了許多功能，特別是 Loader 功能實在是讓我大開眼界。除此之外，我發現他們的文件寫得很好，基本上只要跟著走一遍 Tutorial 就可以掌握新版的寫法調整與新功能哩。"
-tags: ["React", "React Router"]
-date: "2023-03-14"
+title: 'React Router V6 - Setup Routes'
+excerpt: 'React Router 團隊最近又來一次全面升級，新增了許多功能，特別是 Loader 功能實在是讓我大開眼界。除此之外，我發現他們的文件寫得很好，基本上只要跟著走一遍 Tutorial 就可以掌握新版的寫法調整與新功能哩。'
+tags: ['React', 'React Router']
+date: '2023-03-14'
 ---
 
 不多說，讓我們重新開始，就從建立路由開始吧 ⋯⋯ ( Ꙭ)🥕
@@ -22,16 +22,16 @@ React Router v6.4 新增的 [Data APIs](https://reactrouter.com/en/main/routers/
 此方法需要傳入一個由物件所組成的陣列（每一個物件就是一組路由），然後把回傳值提供給 `RouterProvider`。
 
 ```jsx
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "@/routes/Home";
-import ProductsPage from "@/routes/Products";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HomePage from '@/routes/Home';
+import ProductsPage from '@/routes/Products';
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: "/products", element: <ProductsPage /> },
+  { path: '/', element: <HomePage /> },
+  { path: '/products', element: <ProductsPage /> },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,
@@ -45,7 +45,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 在 React Router 中要實現頁面跳轉的功能，我們不是使用原生的 `<a>` 標籤，而是使用 React Router 提供的 `<Link>` 元件。
 
 ```jsx
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from 'react-router-dom';
 <Link to="/products">Products Page</Link>;
 ```
 
@@ -56,12 +56,12 @@ import { Link, NavLink } from "react-router-dom";
 ```jsx
 const getNavLinkClass = ({ isActive, isPending }) => {
   if (isActive) {
-    return "active";
+    return 'active';
   }
   if (isPending) {
-    return "pending";
+    return 'pending';
   }
-  return "";
+  return '';
 };
 
 <NavLink to="/products" className={getNavLinkClass}>
@@ -87,7 +87,7 @@ const getNavLinkClass = ({ isActive, isPending }) => {
 以下的 RootLayout 元件是一個父路由，我們會使用 `children` 配置子路由，而那些子頁面的內容就會顯示在 `<Outlet />` 這個輸出點的位置。
 
 ```jsx
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
 const RootLayout = () => {
   return (
@@ -110,13 +110,13 @@ export default RootLayout;
 ```jsx
 const router = createBrowserRouter([
   {
-    path: "/", // 絕對路徑
+    path: '/', // 絕對路徑
     element: <RootLayout />,
     children: [
       // 相對路徑
       // { path: "", element: <HomePage /> },
       { index: true, element: <HomePage /> },
-      { path: "products", element: <ProductsPage /> },
+      { path: 'products', element: <ProductsPage /> },
     ],
   },
 ]);
@@ -131,7 +131,7 @@ const router = createBrowserRouter([
 製作專案時，我們通常不會直接使用 React Router 內建的錯誤頁面，而是選擇建立一個屬於自己專案的錯誤畫面。
 
 ```jsx
-import { useRouteError } from "react-router-dom";
+import { useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -156,12 +156,12 @@ export default ErrorPage;
 ```jsx
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     errorElement: <ErrorPage />, // catch any errors
     children: [
       { index: true, element: <HomePage /> },
-      { path: "products", element: <ProductsPage /> },
+      { path: 'products', element: <ProductsPage /> },
     ],
   },
 ]);
@@ -174,13 +174,13 @@ const router = createBrowserRouter([
 透過 react-router-dom 提供的 `useNavigate` 函式，就可以執行程式化導頁。
 
 ```jsx
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Home = ({ film }) => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/products");
+    navigate('/products');
   };
 
   return (
@@ -198,15 +198,15 @@ const Home = ({ film }) => {
 在 React Router 中可以使用冒號 (`:`) 代表該片段屬於一個動態路由。
 
 ```jsx
-const router = "createBrowserRouter"([
+const router = 'createBrowserRouter'([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "products", element: <ProductsPage /> },
-      { path: "products/:productId", element: <ProductDetailPage /> },
+      { path: 'products', element: <ProductsPage /> },
+      { path: 'products/:productId', element: <ProductDetailPage /> },
     ],
   },
 ]);
@@ -217,11 +217,11 @@ const router = "createBrowserRouter"([
 這裡的 Identifier (`productId`) 是來自於路由設定裡的 `/product/:productId`，因此如果路由配置更改，這裡取得的 Identifier 也會跟著改變喔。
 
 ```jsx
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from 'react-router-dom';
 
 const DUMMY_PRODUCTS = [
-  { id: "1", title: "Product 1" },
-  { id: "2", title: "Product 2" },
+  { id: '1', title: 'Product 1' },
+  { id: '2', title: 'Product 2' },
 ];
 
 const ProductDetailPage = () => {

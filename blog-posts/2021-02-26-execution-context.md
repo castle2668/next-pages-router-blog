@@ -1,8 +1,8 @@
 ---
-title: "Understand JavaScript #4 Execution Context - How JS Works Behind The Scenes"
-excerpt: "本篇主要介紹 JavaScript 的運作過程，可以瞭解到 JavaScript 底層在做的事情，以及程式碼處理與執行的過程，還有一些我們必須理解的專有名詞。以下一一仔細跟大家說明 (๑•̀ㅂ•́)و✧"
-tags: ["JavaScript"]
-date: "2021-02-26"
+title: 'Understand JavaScript #4 Execution Context - How JS Works Behind The Scenes'
+excerpt: '本篇主要介紹 JavaScript 的運作過程，可以瞭解到 JavaScript 底層在做的事情，以及程式碼處理與執行的過程，還有一些我們必須理解的專有名詞。以下一一仔細跟大家說明 (๑•̀ㅂ•́)و✧'
+tags: ['JavaScript']
+date: '2021-02-26'
 ---
 
 ![讓我們一起看下去](https://i.imgur.com/WybJvLc.png)
@@ -119,9 +119,9 @@ STEP 6：當 a 函式完成後，同樣也會 Pop off，所以現在執行環境
 ```javascript
 b();
 console.log(a);
-var a = "Hello World!";
+var a = 'Hello World!';
 function b() {
-  console.log("Called b");
+  console.log('Called b');
 }
 console.log(a);
 ```
@@ -130,7 +130,7 @@ console.log(a);
 
 ```javascript
 function b() {
-  console.log("Called b");
+  console.log('Called b');
 }
 var a;
 
@@ -138,7 +138,7 @@ b(); // Called b
 
 console.log(a); // undefined
 
-a = "Hello World!";
+a = 'Hello World!';
 console.log(a); // Hello World!
 ```
 
