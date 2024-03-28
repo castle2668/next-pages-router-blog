@@ -1,4 +1,4 @@
-# Shou's Blog
+# Blog
 
 ## 使用技術
 
