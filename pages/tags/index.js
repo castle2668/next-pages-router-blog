@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import AllTags from '@/components/tags/all-tags';
@@ -21,6 +22,13 @@ const AllTagsPage = (props) => {
       <AllTags tags={tags} />
     </>
   );
+};
+
+AllTagsPage.propTypes = {
+  tags: PropTypes.array,
+};
+AllTagsPage.defaultProps = {
+  tags: [],
 };
 
 export default AllTagsPage;

@@ -1,11 +1,11 @@
 import { NextSeo } from 'next-seo';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import PostContent from '@/components/posts/post-detail/post-content';
 import { getPostData, getPostsFiles } from '@/utils/posts-util';
 
 const PostDetailPage = (props) => {
-  console.log(props);
   return (
     <>
       <NextSeo
@@ -21,6 +21,13 @@ const PostDetailPage = (props) => {
       <PostContent post={props.post} />
     </>
   );
+};
+
+PostDetailPage.propTypes = {
+  post: PropTypes.object,
+};
+PostDetailPage.defaultProps = {
+  post: {},
 };
 
 export const getStaticProps = (context) => {

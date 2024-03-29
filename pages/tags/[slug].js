@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import TagDetail from '@/components/tags/tag-detail';
@@ -21,6 +22,15 @@ const TagDetailPage = (props) => {
       <TagDetail tag={tag} posts={posts} />
     </>
   );
+};
+
+TagDetailPage.propTypes = {
+  tag: PropTypes.object,
+  posts: PropTypes.array,
+};
+TagDetailPage.defaultProps = {
+  tag: {},
+  posts: [],
 };
 
 export default TagDetailPage;

@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { DefaultSeo, NextSeo } from 'next-seo';
+import { DefaultSeo } from 'next-seo';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Footer from './footer';
@@ -10,7 +11,7 @@ const Layout = (props) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="images/site/favicon.png" />
+        <link rel="icon" href="/images/site/favicon.png" />
       </Head>
       <DefaultSeo
         title="Yonshan's Blog"
@@ -45,6 +46,13 @@ const Layout = (props) => {
       <Footer />
     </>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node,
+};
+Layout.defaultProps = {
+  children: null,
 };
 
 export default Layout;
