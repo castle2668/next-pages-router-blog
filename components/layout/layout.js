@@ -13,28 +13,28 @@ const Layout = (props) => {
         <link rel="icon" href="images/site/favicon.png" />
       </Head>
       <DefaultSeo
-        title="Shou's Blog"
+        title="Yonshan's Blog"
         description="I post about programming and web development."
         openGraph={{
-          title: "Shou's Blog",
+          title: "Yonshan's Blog",
           description: 'I post about programming and web development.',
           images: [
             {
-              url: '/images/site/shou.jpeg',
+              url: '/images/site/yonshan.jpeg',
               width: 400,
               height: 400,
-              alt: 'An image showing Shou',
+              alt: 'An image showing Yonshan',
               type: 'image/jpeg',
             },
           ],
           type: 'website',
           locale: 'zh_tw',
-          url: 'https://blog.eishou.dev/',
-          siteName: "Shou's Blog",
+          url: 'https://blog.yonshan.dev/',
+          siteName: "Yonshan's Blog",
         }}
         twitter={{
-          handle: '@huangyunghsiang',
-          site: '@huangyunghsiang',
+          handle: '@huangyonshan',
+          site: '@huangyonshan',
           cardType: 'summary_large_image',
         }}
       />
