@@ -8,9 +8,9 @@ const PaginatedPostsPage = (props) => {
   return (
     <>
       <NextSeo
-        canonical={`https://blog.eishou.dev/posts/p/${props.currentPage}`}
+        canonical={`https://blog.yonshan.dev/posts/p/${props.currentPage}`}
         openGraph={{
-          url: `https://blog.eishou.dev/posts/p/${props.currentPage}`,
+          url: `https://blog.yonshan.dev/posts/p/${props.currentPage}`,
         }}
       />
       <AllPosts

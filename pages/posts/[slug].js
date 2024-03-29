@@ -9,12 +9,12 @@ const PostDetailPage = (props) => {
   return (
     <>
       <NextSeo
-        title={`${props.post.title} | Shou's Blog`}
+        title={`${props.post.title} | Yonshan's Blog`}
         description={props.post.excerpt}
-        canonical={`https://blog.eishou.dev/posts/${props.post.slug}`}
+        canonical={`https://blog.yonshan.dev/posts/${props.post.slug}`}
         openGraph={{
-          url: `https://blog.eishou.dev/posts/${props.post.slug}`,
-          title: `${props.post.title} | Shou's Blog`,
+          url: `https://blog.yonshan.dev/posts/${props.post.slug}`,
+          title: `${props.post.title} | Yonshan's Blog`,
           description: props.post.excerpt,
         }}
       />

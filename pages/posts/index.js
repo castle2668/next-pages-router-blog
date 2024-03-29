@@ -8,9 +8,9 @@ const AllPostsPage = (props) => {
   return (
     <>
       <NextSeo
-        canonical="https://blog.eishou.dev/posts"
+        canonical="https://blog.yonshan.dev/posts"
         openGraph={{
-          url: 'https://blog.eishou.dev/posts',
+          url: 'https://blog.yonshan.dev/posts',
         }}
       />
       <AllPosts

@@ -9,13 +9,13 @@ function Hero() {
     <section className={classes.hero}>
       <div className={classes.avatar}>
         <Image
-          src="/images/site/shou.jpeg"
-          alt="An image showing Shou"
+          src="/images/site/yonshan.jpeg"
+          alt="An image showing Yonshan"
           width={100}
           height={100}
         />
       </div>
-      <h1>{`Hi, I'm Shou`}</h1>
+      <h1>{`Hi, I'm Yonshan`}</h1>
       <p>
         I blog about web development - especially frontend frameworks like React
         or Next.
@@ -23,18 +23,18 @@ function Hero() {
         Passion Comes From Mastery.
       </p>
       <div className={classes.social}>
-        <Link href="https://www.linkedin.com/in/koueishou" target="_blank">
+        <Link href="https://www.linkedin.com/in/huangyonshan" target="_blank">
           <Image
             src="/images/site/icon-linkedin.svg"
-            alt="Shou LinkedIn"
+            alt="Yonshan LinkedIn"
             width={30}
             height={30}
           />
         </Link>
-        <Link href="https://github.com/koueishou" target="_blank">
+        <Link href="https://github.com/huangyonshan" target="_blank">
           <Image
             src="/images/site/icon-github.svg"
-            alt="Shou GitHub"
+            alt="Yonshan GitHub"
             width={30}
             height={30}
           />

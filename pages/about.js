@@ -9,24 +9,24 @@ const AboutPage = () => {
   return (
     <>
       <NextSeo
-        title="About | Shou's Blog"
-        canonical="https://blog.eishou.dev/about"
+        title="About | Yonshan's Blog"
+        canonical="https://blog.yonshan.dev/about"
         openGraph={{
-          url: 'https://blog.eishou.dev/about',
-          title: "About | Shou's Blog",
+          url: 'https://blog.yonshan.dev/about',
+          title: "About | Yonshan's Blog",
         }}
       />
       <h2>🍔 About Me | 關於我</h2>
       <p>Frontend Engineer / Taiwanese / Passion Comes From Mastery</p>
       <ul>
-        <li>暱稱：Shou (Sean)</li>
+        <li>暱稱：Yonshan (Sean)</li>
         <li>
           描述：每天都進步 1%，一年後你會進步 37 倍；每天都退步
           1%，一年後你會弱化到趨近於 0！
         </li>
-        <li>狀態：前端菜鳥一枚</li>
+        <li>狀態：永遠的前端菜鳥一枚</li>
         <li>專業：前端開發與資訊管理</li>
-        <li>信箱：sealman.dev@gmail.com</li>
+        <li>信箱：castle2668@gmail.com</li>
       </ul>
       <h2>🏡 About Blog | 關於部落格</h2>
       {/* <p>
@@ -38,7 +38,7 @@ const AboutPage = () => {
         歡迎大家交流 (\*´∀`)~♥
       </p>
       <ul>
-        <li>網站名稱：{`Shou's Blog`}</li>
+        <li>網站名稱：{`Yonshan's Blog`}</li>
         <li>網站類型：部落格</li>
         <li>網站描述：還在想要寫些什麼</li>
         <li>網站網址：暫時掛點了，因為還沒付錢</li>

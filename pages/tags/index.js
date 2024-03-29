@@ -11,11 +11,11 @@ const AllTagsPage = (props) => {
   return (
     <>
       <NextSeo
-        title="標籤列表 | Shou's Blog"
-        canonical="https://blog.eishou.dev/tags"
+        title="標籤列表 | Yonshan's Blog"
+        canonical="https://blog.yonshan.dev/tags"
         openGraph={{
-          url: 'https://blog.eishou.dev/tags',
-          title: "標籤列表 | Shou's Blog",
+          url: 'https://blog.yonshan.dev/tags',
+          title: "標籤列表 | Yonshan's Blog",
         }}
       />
       <AllTags tags={tags} />
