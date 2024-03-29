@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import AllPosts from '@/components/posts/all-posts';
@@ -20,6 +21,17 @@ const AllPostsPage = (props) => {
       />
     </>
   );
+};
+
+AllPostsPage.propTypes = {
+  posts: PropTypes.array,
+  currentPage: PropTypes.number,
+  numPages: PropTypes.number,
+};
+AllPostsPage.defaultProps = {
+  posts: [],
+  currentPage: 1,
+  numPages: 1,
 };
 
 export const getStaticProps = () => {
