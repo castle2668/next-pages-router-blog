@@ -11,7 +11,7 @@ const Layout = (props) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/images/site/favicon.png" />
+        <link rel="icon" href="/images/site/favicon.ico" sizes="any" />
       </Head>
       <DefaultSeo
         title="Yonshan's Blog"
