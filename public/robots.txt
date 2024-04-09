@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://blog.yonshan.dev
-
-# Sitemaps
-Sitemap: https://blog.yonshan.dev/sitemap.xml
