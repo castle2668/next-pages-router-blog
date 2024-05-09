@@ -38,6 +38,17 @@ const Layout = (props) => {
           site: '@huangyonshan',
           cardType: 'summary_large_image',
         }}
+        additionalMetaTags={[
+          {
+            name: 'author',
+            content: 'Yonshan Huang',
+          },
+          {
+            name: 'keywords',
+            content:
+              'programming, web development, frontend, javascript, react, next.js, ant design, css, eslint, git, html, information ethics, life, lodash, nuk, open data, operating system, prettier, quasar, redux, redux toolkit, react router, sdg, swr, styled components, vue, movie',
+          },
+        ]}
       />
       <Header />
       <div className={classes.container}>
