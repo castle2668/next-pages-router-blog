@@ -11,26 +11,26 @@ date: '2021-03-30'
 
 - Immediately Invoked Function Expressions (IIFEs)：在創造函式後立刻呼叫函式
 
-以下三個函式最終都會出現 `Hello Sealman` 的結果，其中第三個我們比較陌生，它是回傳 (return) 一段字串，並賦予給等號左邊的變數 `greeting`。
+以下三個函式最終都會出現 `Hello Damao` 的結果，其中第三個我們比較陌生，它是回傳 (return) 一段字串，並賦予給等號左邊的變數 `greeting`。
 
 ```javascript
 // Function Statement
 function greet(name) {
   console.log('Hello ' + name);
 }
-greet('Sealman');
+greet('Damao');
 
 // Using a Function Expression
 var greetFunc = function (name) {
   console.log('Hello ' + name);
 };
-greetFunc('Sealman');
+greetFunc('Damao');
 
 // Return a value to variable
 var greeting = function (name) {
   return 'Hello ' + name;
 };
-console.log(greeting('Sealman')); // Hello Sealman
+console.log(greeting('Damao')); // Hello Damao
 ```
 
 我們對剛才的函式做一些修改，我們在 `function{}()` 後方加上 `()` 來執行函式。
@@ -41,7 +41,7 @@ console.log(greeting('Sealman')); // Hello Sealman
 // Using an Immediately Invoked Function Expression
 var greeting = (function (name) {
   return 'Hello ' + name; // 回傳一個字串
-})('Sealman');
+})('Damao');
 console.log(greeting); // 是一個字串，不是函式
 ```
 
@@ -74,13 +74,13 @@ function greet(name) {
 一個函式表達式被括號包住，所以 Parser 會認為這不是函式陳述式，而是一個立即執行的函式，因為最後的 `()` 執行了函式。
 
 ```javascript
-var firstname = 'Sealman';
+var firstname = 'Damao';
 
 (function (name) {
   console.log('Inside IIFE: Hello ' + name);
 })(firstname);
 
-// Inside IIFE: Hello Sealman
+// Inside IIFE: Hello Damao
 ```
 
 對了，IIFE 常見的寫法有兩種，但這個不是很重要，因為功能都一樣，只是美感問題而已。
@@ -113,7 +113,7 @@ var firstname = 'Sealman';
 (function (name) {
   var greeting = 'Hello';
   console.log(greeting + ' ' + name);
-})('Sealman');
+})('Damao');
 ```
 
 由於物件傳參考的特性，我們可以把全域物件 `window` 的參考傳給 IIFE，這樣就能影響到全域物件哩。
@@ -122,8 +122,8 @@ var firstname = 'Sealman';
 (function (global, name) {
   var greeting = 'Hello';
   global.greeting = 'Hola'; // 故意影響全域物件
-  console.log(greeting + ' ' + name); // Hello Sealman
-})(window, 'Sealman');
+  console.log(greeting + ' ' + name); // Hello Damao
+})(window, 'Damao');
 
 console.log(greeting); // Hola
 ```

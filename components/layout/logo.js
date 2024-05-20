@@ -6,7 +6,7 @@ import classes from './logo.module.css';
 const Logo = () => {
   return (
     <Link href="/" className={classes.logo}>
-      <h1>{`Yonshan's Blog`}</h1>
+      <h1>大貓的第一個家</h1>
     </Link>
   );
 };

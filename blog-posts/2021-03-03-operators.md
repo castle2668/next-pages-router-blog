@@ -198,7 +198,7 @@ function greet(name) {
   console.log('Hello ' + name);
 }
 
-greet('Sealman'); // Hello Sealman
+greet('Damao'); // Hello Damao
 greet(); // Hello <Your name here>
 ```
 

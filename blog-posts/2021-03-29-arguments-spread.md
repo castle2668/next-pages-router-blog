@@ -23,11 +23,11 @@ greet();
 
 ```javascript
 function greet(firstname, lastname, language = 'en') {
-  console.log(firstname); // Sealman
+  console.log(firstname); // Damao
   console.log(lastname); // Huang
   console.log(language); // en
 }
-greet('Sealman', 'Huang');
+greet('Damao', 'Huang');
 ```
 
 然而，如果要針對某些不支援 ES6 的瀏覽器做處理，我們就只能自己動手完成預設值的概念了。例如：當 language 是 undefined 的時候，會強制轉型為 false，最終就會得到 `'en'` 的值。
@@ -39,7 +39,7 @@ function greet(firstname, lastname, language) {
   console.log(lastname);
   console.log(language);
 }
-greet('Sealman', 'Huang');
+greet('Damao', 'Huang');
 ```
 
 ## ES5 的 arguments 關鍵字
@@ -70,7 +70,7 @@ function greet(firstname, lastname, language) {
 }
 
 greet();
-greet('Sealman', 'Huang', 'zh-tw');
+greet('Damao', 'Huang', 'zh-tw');
 ```
 
 ## ES6 的 spread parameter
@@ -85,7 +85,7 @@ function greet(firstname, lastname, language, ...other) {
   console.log(other); // (2) ["test1", "test2"]
 }
 
-greet('Sealman', 'Huang', 'zh-tw', 'test1', 'test2');
+greet('Damao', 'Huang', 'zh-tw', 'test1', 'test2');
 ```
 
 ## 回顧

@@ -1,6 +1,6 @@
 ---
 title: 'JavaScript Object Snippets'
-excerpt: '開發上，我們常常對物件做各種操作與應用，本文記載海豹人常用到的物件操作方式。'
+excerpt: '開發上，我們常常對物件做各種操作與應用，本文記載大貓常用到的物件操作方式。'
 tags: ['JavaScript']
 date: '2023-02-05'
 ---

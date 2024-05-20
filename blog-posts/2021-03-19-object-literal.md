@@ -175,12 +175,12 @@ JSON 是有效的物件實體語法，因為物件實體語法的屬性是可以
 
 ```javascript
 const objectLiteral = {
-  firstname: 'Sealman',
+  firstname: 'Damao',
   isProgrammer: true,
 };
 
 console.log(JSON.stringify(objectLiteral));
-// {"firstname":"Sealman","isProgrammer":true}
+// {"firstname":"Damao","isProgrammer":true}
 
 console.log(typeof JSON.stringify(objectLiteral)); // string
 ```
@@ -188,10 +188,10 @@ console.log(typeof JSON.stringify(objectLiteral)); // string
 `JSON.parse` 會接受一個符合 JSON 格式的字串，把它轉換為 JavaScript 物件。
 
 ```javascript
-const jsonValue = '{"firstname":"Sealman","isProgrammer":true}';
+const jsonValue = '{"firstname":"Damao","isProgrammer":true}';
 
 console.log(JSON.parse(jsonValue));
-// {firstname: "Sealman", isProgrammer: true}
+// {firstname: "Damao", isProgrammer: true}
 
 console.log(typeof JSON.parse(jsonString)); // object
 ```

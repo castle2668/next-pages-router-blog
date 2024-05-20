@@ -20,7 +20,7 @@ console.log(typeof a); // number
 var b = 'Hello';
 console.log(typeof b); // string
 
-var c = { firstname: 'Sealman' };
+var c = { firstname: 'Damao' };
 console.log(typeof c); // object
 
 var d = [];
@@ -64,9 +64,9 @@ console.log(a.toString()); // "3"
 var b = 'Hello';
 console.log(b.toString()); // "Hello"
 
-var c = { firstname: 'Sealman' };
+var c = { firstname: 'Damao' };
 console.log(c.toString()); // "[object Object]"
-console.log(JSON.stringify(c)); // {"firstname":"Sealman"}
+console.log(JSON.stringify(c)); // {"firstname":"Damao"}
 ```
 
 如果是陣列呢？陣列也是一種物件，所以基本上跟物件的結果一樣。
@@ -130,8 +130,8 @@ console.log(Object.prototype.toString.call(null)); // [object Null]
 function Person(name) {
   this.name = name;
 }
-var e = new Person('Sealman');
-console.log(e); // Person {name: "Sealman"}
+var e = new Person('Damao');
+console.log(e); // Person {name: "Damao"}
 console.log(typeof e); // object
 console.log(e instanceof Person); // true
 ```

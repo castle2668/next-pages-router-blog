@@ -9,32 +9,27 @@ function Hero() {
     <section className={classes.hero}>
       <div className={classes.avatar}>
         <Image
-          src="/images/site/yonshan.jpeg"
-          alt="An image showing Yonshan"
+          src="/images/site/avatar.jpeg"
+          alt="An image showing avatar"
           width={100}
           height={100}
         />
       </div>
-      <h1>{`Hi, I'm Yonshan`}</h1>
-      <p>
-        I blog about web development - especially frontend frameworks like React
-        or Next.
-        <br />
-        Passion Comes From Mastery.
-      </p>
+      <h1>Hi, 我是大貓</h1>
+      <p>這裡記錄我學習網站開發的筆記，歡迎交流 (*´∀`)~♥</p>
       <div className={classes.social}>
-        <Link href="https://www.linkedin.com/in/huangyonshan" target="_blank">
+        <Link href="https://www.linkedin.com/in/castle2668" target="_blank">
           <Image
             src="/images/site/icon-linkedin.svg"
-            alt="Yonshan LinkedIn"
+            alt="LinkedIn"
             width={30}
             height={30}
           />
         </Link>
-        <Link href="https://github.com/huangyonshan" target="_blank">
+        <Link href="https://github.com/castle2668" target="_blank">
           <Image
             src="/images/site/icon-github.svg"
-            alt="Yonshan GitHub"
+            alt="GitHub"
             width={30}
             height={30}
           />

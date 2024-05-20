@@ -10,11 +10,11 @@ const ArchivesPage = (props) => {
   return (
     <>
       <NextSeo
-        title="Archives | Yonshan's Blog"
-        canonical="https://blog.yonshan.dev/archives"
+        title="Archives | 大貓的第一個家"
+        canonical="https://www.damao.dev/archives"
         openGraph={{
-          url: 'https://blog.yonshan.dev/archives',
-          title: "Archives | Yonshan's Blog",
+          url: 'https://www.damao.dev/archives',
+          title: 'Archives | 大貓的第一個家',
         }}
       />
       <ArchivesList posts={posts} count={count} />

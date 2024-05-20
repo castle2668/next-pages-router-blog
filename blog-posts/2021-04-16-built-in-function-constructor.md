@@ -113,22 +113,22 @@ JavaScript 的陣列是一種特別的「物件」，陣列的索引 0, 1, 2 其
 
 ```javascript
 Array.prototype.myCustomFeature = 'cool!';
-var arr = ['Sealman', 'Sunny', 'Shirogoma'];
+var arr = ['Damao', 'Sealman', 'Sean'];
 
 for (var prop in arr) {
   console.log(prop + ': ' + arr[prop]);
 }
-// 0: Sealman
-// 1: Sunny
-// 2: Shirogoma
+// 0: Damao
+// 1: Sealman
+// 2: Sean
 // myCustomFeature: cool!
 
 for (var i = 0; i < arr.length; i++) {
   console.log(i + ': ' + arr[i]);
 }
-// 0: Sealman
-// 1: Sunny
-// 2: Shirogoma
+// 0: Damao
+// 1: Sealman
+// 2: Sean
 ```
 
 ## 回顧
