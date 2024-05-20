@@ -14,34 +14,34 @@ const Layout = (props) => {
         <link rel="icon" href="/images/site/favicon.ico" sizes="any" />
       </Head>
       <DefaultSeo
-        title="Yonshan's Blog"
+        title="大貓的第一個家"
         description="I post about programming and web development."
         openGraph={{
-          title: "Yonshan's Blog",
+          title: '大貓的第一個家',
           description: 'I post about programming and web development.',
           images: [
             {
-              url: '/images/site/yonshan.jpeg',
+              url: '/images/site/avatar.jpeg',
               width: 400,
               height: 400,
-              alt: 'An image showing Yonshan',
+              alt: 'An image showing avatar',
               type: 'image/jpeg',
             },
           ],
           type: 'website',
           locale: 'zh_tw',
-          url: 'https://blog.yonshan.dev/',
-          siteName: "Yonshan's Blog",
+          url: 'https://www.damao.dev/',
+          siteName: '大貓的第一個家',
         }}
         twitter={{
-          handle: '@huangyonshan',
-          site: '@huangyonshan',
+          handle: '@castle2668',
+          site: '@castle2668',
           cardType: 'summary_large_image',
         }}
         additionalMetaTags={[
           {
             name: 'author',
-            content: 'Yonshan Huang',
+            content: 'castle2668',
           },
           {
             name: 'keywords',

@@ -1,6 +1,6 @@
 ---
 title: 'The JavaScript Array Methods Handbook'
-excerpt: '健忘的海豹人常常需要查看的陣列處理方法小抄。'
+excerpt: '健忘的大貓常常需要查看的陣列處理方法小抄。'
 tags: ['JavaScript']
 date: '2023-01-30'
 ---
@@ -53,12 +53,12 @@ console.log(result);
 原陣列經過指定的函式「過濾」後，回傳新的結果陣列。
 
 ```javascript
-const words = ['Sean', 'Sunny', 'Paul', 'Iris', 'Julia'];
+const words = ['Sean', 'Damao', 'Paul', 'Iris', 'Julia'];
 
 const result = words.filter((word) => word.length > 4);
 
 console.log(result);
-// Expected output: Array ["Sunny", "Julia"]
+// Expected output: Array ["Damao", "Julia"]
 ```
 
 ## concat

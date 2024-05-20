@@ -24,8 +24,8 @@ function greet(firstname, lastname, language) {
   }
 }
 
-greet('Sealman', 'Huang', 'en');
-greet('Sealman', 'Huang', 'es');
+greet('Damao', 'Huang', 'en');
+greet('Damao', 'Huang', 'es');
 ```
 
 我們可以再加強以上寫法，使用類似重載函式的寫法，讓函式不用傳入這麼多資訊。
@@ -41,8 +41,8 @@ function greetSpanish(firstname, lastname) {
   greet(firstname, lastname, 'es');
 }
 
-greetEnglish('Sealman', 'Huang');
-greetSpanish('Sealman', 'Huang');
+greetEnglish('Damao', 'Huang');
+greetSpanish('Damao', 'Huang');
 ```
 
 這種類似重載函式的寫法是一個在 JavaScript 中比較簡單的模式，可以幫助我們更清楚地瞭解每個函式的用途，接下來我們以此為基礎，進階到函式工廠這個設計模式。
@@ -70,8 +70,8 @@ function makeGreeting(language) {
 var greetEnglish = makeGreeting('en');
 var greetSpanish = makeGreeting('es');
 
-greetEnglish('Sealman', 'Huang');
-greetSpanish('Sealman', 'Huang');
+greetEnglish('Damao', 'Huang');
+greetSpanish('Damao', 'Huang');
 ```
 
 接著我們執行了兩次 `makeGreeting`，雖然這是同一個函式（詞彙環境相同），但是執行兩次就會產生兩個不同的**執行環境**，因此產生的兩個變數 `language` 的**記憶體位址**是不同的。

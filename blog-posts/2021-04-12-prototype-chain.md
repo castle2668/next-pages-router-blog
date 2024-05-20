@@ -32,20 +32,20 @@ var person = {
   },
 };
 
-var sealman = {
-  firstname: 'Sealman',
+var damao = {
+  firstname: 'Damao',
   lastname: 'Huang',
 };
 
 // Don't do this EVER! for example purposes only.
-sealman.__proto__ = person; // (1)
-console.log(sealman.getFullName()); // (2) Sealman Huang
-console.log(sealman.firstname); // (3) Sealman
+damao.__proto__ = person; // (1)
+console.log(damao.getFullName()); // (2) Damao Huang
+console.log(damao.firstname); // (3) Damao
 ```
 
-1. 將 `sealman` 的原型屬性設定為 `person`，意思就是 `sealman` 繼承自 `person`。換句話說，就是 `sealman` 原來的本質被設定為 `person`。
-2. 在 `sealman` 裡面找不到 `getFullName` 方法時，會往原型 `proto` 尋找。注意：此時方法中的 `this` 會指向呼叫函式的物件 `sealman`。
-3. 使用 `sealman.firstname` 在 `sealman` 物件找到 `firstname` 之後就會結束了，不會再進入原型鏈。
+1. 將 `damao` 的原型屬性設定為 `person`，意思就是 `damao` 繼承自 `person`。換句話說，就是 `damao` 原來的本質被設定為 `person`。
+2. 在 `damao` 裡面找不到 `getFullName` 方法時，會往原型 `proto` 尋找。注意：此時方法中的 `this` 會指向呼叫函式的物件 `damao`。
+3. 使用 `damao.firstname` 在 `damao` 物件找到 `firstname` 之後就會結束了，不會再進入原型鏈。
 
 ## 基本物件
 
@@ -98,52 +98,52 @@ var person = {
   },
 };
 
-var sealman = {
-  firstname: 'Sealman',
+var damao = {
+  firstname: 'Damao',
   lastname: 'Huang',
 };
 
-sealman.__proto__ = person; // Don't do this EVER! for example purposes only.
+damao.__proto__ = person; // Don't do this EVER! for example purposes only.
 
 // 1. 遍歷物件裡的每個東西
-for (var prop in sealman) {
-  console.log(prop + ': ' + sealman[prop]); // 使用中括號，因為 prop 是字串
+for (var prop in damao) {
+  console.log(prop + ': ' + damao[prop]); // 使用中括號，因為 prop 是字串
 }
 
 // 2. 只取得自己本身的東西
-for (var prop in sealman) {
+for (var prop in damao) {
   // 後代可以使用基本物件的方法
-  if (sealman.hasOwnProperty(prop)) {
-    console.log(prop + ': ' + sealman[prop]);
+  if (damao.hasOwnProperty(prop)) {
+    console.log(prop + ': ' + damao[prop]);
   }
 }
 ```
 
-1. 使用 `for...in` 遍歷物件裡的每個東西，除了物件 `sealman` 本身的屬性和方法，`for...in` 也會取得原型上的屬性和方法。
+1. 使用 `for...in` 遍歷物件裡的每個東西，除了物件 `damao` 本身的屬性和方法，`for...in` 也會取得原型上的屬性和方法。
 2. 如果只想取得自己本身的東西，可以使用**基本物件**的 `hasOwnProperty` 方法，這個就類似於 Reflect 的動作。
 
 知道了 Reflection 的概念後，我們來看看怎麼使用 Extend 這個模式。
 
 ### Extend
 
-使用 Extend 時，第一個參數是想要延長的物件（一個後代），而後方第二、第三個參數的物件可以放很多個（多個祖先），所以最後會有一大串東西加到我們的 `sealman` 物件裡面。
+使用 Extend 時，第一個參數是想要延長的物件（一個後代），而後方第二、第三個參數的物件可以放很多個（多個祖先），所以最後會有一大串東西加到我們的 `damao` 物件裡面。
 
 ```javascript
-var sunny = {
+var sean = {
   address: '111 Main St.',
   getFormalFullName: function () {
     return this.lastname + ' ' + this.firstname;
   },
 };
 
-var shirogoma = {
+var sealman = {
   getFirstName: function () {
     return this.firstname;
   },
 };
 
-_.extend(sealman, sunny, shirogoma);
-console.log(sealman);
+_.extend(damao, sean, sealman);
+console.log(damao);
 ```
 
 由此可以看出，Underscore 的 `_.extend()` 跟原型鏈的概念不同，它是把很多屬性結合放到一個物件上。

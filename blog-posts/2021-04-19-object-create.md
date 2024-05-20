@@ -11,7 +11,7 @@ date: '2021-04-19'
 - 現在的瀏覽器幾乎都有內建
 - **建立一個物件當作基本物件，然後在這個物件上建立新物件**
 
-使用範例：我們建立一個物件 `person` 作為基本物件，透過 `Object.create` 將它作為原型使用，在這個物件上面建立新的物件 `sealman`。
+使用範例：我們建立一個物件 `person` 作為基本物件，透過 `Object.create` 將它作為原型使用，在這個物件上面建立新的物件 `damao`。
 
 ```javascript
 var person = {
@@ -24,9 +24,9 @@ var person = {
 
 console.log(person.greet()); // Hi Default
 
-var sealman = Object.create(person); // 從傳入的物件上建立物件
-console.log(sealman); // 是一個空物件，它的原型是 person 物件
-console.log(sealman.greet()); // Hi Default
+var damao = Object.create(person); // 從傳入的物件上建立物件
+console.log(damao); // 是一個空物件，它的原型是 person 物件
+console.log(damao.greet()); // Hi Default
 ```
 
 > 注意：如果沒有用 `this`，執行時會到全域執行環境中找 `firstname`，因為全域中只有 `person`，而 `person` 是物件所以不會建立執行環境，最後結果就會找不到 `firstname`。
@@ -36,15 +36,15 @@ console.log(sealman.greet()); // Hi Default
 使用 `Object.create` 後，可以再建立新物件的屬性和方法去覆蓋原型給的預設值。執行時，原型鏈找到新物件就會停止，不會繼續往下找。
 
 ```javascript
-sealman.firstname = 'Sealman';
-sealman.lastname = 'Huang';
-console.log(sealman.greet()); // Hi Sealman
-console.log(sealman); // {firstname: "Sealman", lastname: "Huang"}
+damao.firstname = 'Damao';
+damao.lastname = 'Huang';
+console.log(damao.greet()); // Hi Damao
+console.log(damao); // {firstname: "Damao", lastname: "Huang"}
 ```
 
 ### 範例：建立多層繼承
 
-目標：Object > Animal > Mamegoma > Sealman
+目標：Object > Animal > Mamegoma > Damao
 
 ```javascript
 function Animal(species) {

@@ -14,7 +14,7 @@ date: '2021-04-15'
 ```javascript
 function Person() {
   console.log(this);
-  this.firstname = 'Sealman';
+  this.firstname = 'Damao';
   this.lastname = 'Huang';
   console.log('This function is invoked');
 
@@ -22,18 +22,18 @@ function Person() {
 }
 
 // 使用 new 運算子，不是在呼叫一個函式
-var sealman = new Person();
-console.log(sealman);
+var damao = new Person();
+console.log(damao);
 ```
 
-1. 用 `new` 建立一個空物件，效果就像是用 `var sealman = {}` 建立的一個空物件
+1. 用 `new` 建立一個空物件，效果就像是用 `var damao = {}` 建立的一個空物件
 2. 呼叫函式 `Person()` 時，執行環境會產生變數 `this`，但是它的指向會被 `new` 改變而指向一個空物件的記憶體空間，結果就會像是一個全新的物件呼叫了 Person 函式
 3. 將 `this.firstname` 和 `this.lastname` 新增到空物件上
 4. 最後當我們使用 `new` 運算子呼叫函式後 ⋯⋯
 
    - 如果函式內容沒有 return 東西，那麼 JavaScript 引擎會自動回傳空物件
    - 但是如果有透過 `this` 設定東西，則會回傳我們用 `new` 運算子建立的物件，在物件裡面有 `firstname` 與 `lastname` 等已經設定好的屬性
-   - 如果函式最後是直接 return 一個物件，那麼 `sealman` 就會直接等於 return 的東西
+   - 如果函式最後是直接 return 一個物件，那麼 `damao` 就會直接等於 return 的東西
 
 5. 另外，這裡的 `new Person()` 其實是有呼叫函式的，我們加上 `console.log` 去測試，可以發現函式真的有被執行
 
@@ -47,8 +47,8 @@ function Person(firstname, lastname) {
   console.log('This function is invoked');
 }
 
-var sunny = new Person('Sunny', 'Hu');
-console.log(sunny);
+var sean = new Person('Sean', 'Huang');
+console.log(sean);
 
 var john = new Person('John', 'Doe');
 console.log(john);

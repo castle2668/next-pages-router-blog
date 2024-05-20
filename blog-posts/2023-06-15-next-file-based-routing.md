@@ -1,5 +1,5 @@
 ---
-title: 'Next.js - Pages & File-based Routing'
+title: '基於檔案的 Next.js 頁面路由'
 date: '2023-06-15'
 excerpt: '今年下半年接了一個公司的對外專案，因此有 SEO 需求，不知道是不是靜茹給我的勇氣，讓我主動提出可以使用 Next.js 的 SSR 來架構新專案，總之就是且戰且走吧，從零開始一邊做一邊學。'
 tags: ['Next', 'Pages Router']

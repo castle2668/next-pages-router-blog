@@ -12,11 +12,11 @@ const TagDetailPage = (props) => {
   return (
     <>
       <NextSeo
-        title={`${tag.name} | Yonshan's Blog`}
-        canonical={`https://blog.yonshan.dev/tags/${tag.slug}`}
+        title={`${tag.name} | 大貓的第一個家`}
+        canonical={`https://www.damao.dev/tags/${tag.slug}`}
         openGraph={{
-          url: `https://blog.yonshan.dev/tags/${tag.slug}`,
-          title: `${tag.name} | Yonshan's Blog`,
+          url: `https://www.damao.dev/tags/${tag.slug}`,
+          title: `${tag.name} | 大貓的第一個家`,
         }}
       />
       <TagDetail tag={tag} posts={posts} />

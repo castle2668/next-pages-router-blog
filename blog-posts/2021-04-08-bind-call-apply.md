@@ -15,7 +15,7 @@ date: '2021-04-08'
 
 ```javascript
 var person = {
-  firstname: 'Sealman',
+  firstname: 'Damao',
   lastname: 'Huang',
   getFullName: function () {
     var fullName = `${this.firstname} ${this.lastname}`;
@@ -56,7 +56,7 @@ var logName = function (lang1, lang2) {
 var logPersonName = logName.bind(person);
 
 logPersonName('zh-tw', 'en');
-// Logged: Sealman Huang
+// Logged: Damao Huang
 // Arguments: zh-tw en
 ```
 
@@ -67,7 +67,7 @@ var logName = function (lang1, lang2) {
   console.log(`Logged: ${this.getFullName()}`);
 }.bind(person);
 
-logName(); // Logged: Sealman Huang
+logName(); // Logged: Damao Huang
 ```
 
 ## call()
@@ -83,7 +83,7 @@ var logName = function (lang1, lang2) {
 };
 
 logName.call(person, 'zh-tw', 'en');
-// Logged: Sealman Huang
+// Logged: Damao Huang
 // Arguments: zh-tw en
 ```
 
@@ -93,7 +93,7 @@ logName.call(person, 'zh-tw', 'en');
 (function (lang1, lang2) {
   console.log(`Logged: ${this.getFullName()}`);
   console.log(`Arguments: ${lang1} ${lang2}`);
-}.call(person, 'zh-tw', 'en'));
+}).call(person, 'zh-tw', 'en');
 ```
 
 ## apply()
@@ -104,7 +104,7 @@ logName.call(person, 'zh-tw', 'en');
 
 ```javascript
 logName.apply(person, ['zh-tw', 'en']);
-// Logged: Sealman Huang
+// Logged: Damao Huang
 // Arguments: zh-tw en
 ```
 
@@ -116,7 +116,7 @@ logName.apply(person, ['zh-tw', 'en']);
 (function (lang1, lang2) {
   console.log(`Logged: ${this.getFullName()}`);
   console.log(`Arguments: ${lang1} ${lang2}`);
-}.apply(person, ['zh-tw', 'en']));
+}).apply(person, ['zh-tw', 'en']);
 ```
 
 ## 實際應用
@@ -133,8 +133,8 @@ logName.apply(person, ['zh-tw', 'en']);
 
 ```javascript
 var person2 = {
-  firstname: 'Sunny',
-  lastname: 'Hu',
+  firstname: 'Sealman',
+  lastname: 'Huang',
 };
 
 console.log(person.getFullName.call(person2));
