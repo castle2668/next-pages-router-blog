@@ -42,7 +42,7 @@ const PostsItem = (props) => {
       )}
       <div className={classes.content}>
         <Link href={linkPath}>
-          <h3>{title}</h3>
+          <h2>{title}</h2>
           {image && (
             <div className={classes.image}>
               <Image src={imagePath} alt={title} fill sizes="100vw" />

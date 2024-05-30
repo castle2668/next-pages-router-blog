@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Kurewa';
   src: url(/fonts/KurewaGothicCjkTc-Regular.woff2) format('woff2');
+  font-display: swap;
 }
 
 :root {
@@ -24,7 +25,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: sans-serif, 'Arial';
   background-color: #fff;
 }
 
