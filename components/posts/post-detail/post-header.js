@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import classes from './post-header.module.scss';
@@ -15,3 +16,12 @@ const PostHeader = (props) => {
 };
 
 export default PostHeader;
+
+PostHeader.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+};
+PostHeader.defaultProps = {
+  title: '',
+  image: '',
+};

@@ -37,12 +37,6 @@ export const getAllPosts = () => {
   return sortedPosts;
 };
 
-// export function getFeaturedPosts() {
-//   const allPosts = getAllPosts();
-//   const featuredPosts = allPosts.filter((post) => post.isFeatured);
-//   return featuredPosts;
-// }
-
 // 生成每頁的文章陣列
 export const getPaginatedPosts = (page = 1, postsPerPage = 10) => {
   const currentPage = parseInt(page);

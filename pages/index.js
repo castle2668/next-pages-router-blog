@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import AllPosts from '@/components/posts/all-posts';
@@ -26,3 +27,14 @@ export const getStaticProps = () => {
 };
 
 export default HomePage;
+
+HomePage.propTypes = {
+  posts: PropTypes.array,
+  currentPage: PropTypes.number,
+  numPages: PropTypes.number,
+};
+HomePage.defaultProps = {
+  posts: [],
+  currentPage: 0,
+  numPages: 0,
+};

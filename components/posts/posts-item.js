@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { slugify } from '@/utils/helper';
@@ -56,3 +57,24 @@ const PostsItem = (props) => {
 };
 
 export default PostsItem;
+
+PostsItem.propTypes = {
+  post: PropTypes.shape({
+    title: PropTypes.string,
+    image: PropTypes.string,
+    excerpt: PropTypes.string,
+    date: PropTypes.string,
+    slug: PropTypes.string,
+    tags: PropTypes.array,
+  }),
+};
+PostsItem.defaultProps = {
+  post: {
+    title: '',
+    image: '',
+    excerpt: '',
+    date: '',
+    slug: '',
+    tags: [],
+  },
+};

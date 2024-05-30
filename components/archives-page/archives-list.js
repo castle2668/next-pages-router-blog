@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import classes from './archives-list.module.scss';
@@ -30,3 +31,12 @@ const ArchivesList = (props) => {
 };
 
 export default ArchivesList;
+
+ArchivesList.propTypes = {
+  posts: PropTypes.array,
+  count: PropTypes.number,
+};
+ArchivesList.defaultProps = {
+  posts: [],
+  count: 0,
+};

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
 import classes from './pagination.module.scss';
@@ -41,3 +42,12 @@ const Pagination = (props) => {
 };
 
 export default Pagination;
+
+Pagination.propTypes = {
+  currentPage: PropTypes.number,
+  numPages: PropTypes.number,
+};
+Pagination.defaultProps = {
+  currentPage: 0,
+  numPages: 0,
+};

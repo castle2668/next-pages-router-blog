@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 
 import Head from 'next/head';
 import Script from 'next/script';
+import PropTypes from 'prop-types';
 
 import Layout from '@/components/layout/layout';
 
@@ -27,3 +28,12 @@ export default function App({ Component, pageProps }) {
     </Layout>
   );
 }
+
+App.propTypes = {
+  Component: PropTypes.elementType,
+  pageProps: PropTypes.object,
+};
+App.defaultProps = {
+  Component: null,
+  pageProps: {},
+};

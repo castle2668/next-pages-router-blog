@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import classes from './all-tags.module.scss';
@@ -24,3 +25,10 @@ const AllTags = (props) => {
 };
 
 export default AllTags;
+
+AllTags.propTypes = {
+  tags: PropTypes.array,
+};
+AllTags.defaultProps = {
+  tags: [],
+};
