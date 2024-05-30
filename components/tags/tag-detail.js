@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import AllPosts from '../posts/all-posts';
@@ -15,3 +16,12 @@ const TagDetail = (props) => {
 };
 
 export default TagDetail;
+
+TagDetail.propTypes = {
+  tag: PropTypes.object,
+  posts: PropTypes.array,
+};
+TagDetail.defaultProps = {
+  tag: {},
+  posts: [],
+};

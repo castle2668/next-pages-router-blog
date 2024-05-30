@@ -19,8 +19,7 @@ const handler = async (req, res) => {
     const { email, name, message } = req.body;
 
     if (
-      !email ||
-      !email.includes('@') ||
+      !email?.includes('@') ||
       !name ||
       name.trim() === '' ||
       !message ||
@@ -63,7 +62,7 @@ const handler = async (req, res) => {
 
     res
       .status(201)
-      .json({ message: 'Successfully stored message!', message: newMessage });
+      .json({ message: newMessage || 'Successfully stored message!' });
   }
 };
 

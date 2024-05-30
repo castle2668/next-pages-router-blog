@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { slugify } from '@/utils/helper';
@@ -41,7 +42,7 @@ const PostsItem = (props) => {
       )}
       <div className={classes.content}>
         <Link href={linkPath}>
-          <h3>{title}</h3>
+          <h2>{title}</h2>
           {image && (
             <div className={classes.image}>
               <Image src={imagePath} alt={title} fill sizes="100vw" />
@@ -56,3 +57,24 @@ const PostsItem = (props) => {
 };
 
 export default PostsItem;
+
+PostsItem.propTypes = {
+  post: PropTypes.shape({
+    title: PropTypes.string,
+    image: PropTypes.string,
+    excerpt: PropTypes.string,
+    date: PropTypes.string,
+    slug: PropTypes.string,
+    tags: PropTypes.array,
+  }),
+};
+PostsItem.defaultProps = {
+  post: {
+    title: '',
+    image: '',
+    excerpt: '',
+    date: '',
+    slug: '',
+    tags: [],
+  },
+};

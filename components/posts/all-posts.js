@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
 import Pagination from '../ui/pagination';
@@ -28,3 +29,14 @@ const AllPosts = (props) => {
 };
 
 export default AllPosts;
+
+AllPosts.propTypes = {
+  posts: PropTypes.array,
+  currentPage: PropTypes.number,
+  numPages: PropTypes.number,
+};
+AllPosts.defaultProps = {
+  posts: [],
+  currentPage: 0,
+  numPages: 0,
+};

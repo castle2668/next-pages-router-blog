@@ -16,7 +16,11 @@ function Hero() {
         />
       </div>
       <h1>Hi, 我是大貓</h1>
-      <p>這裡記錄我學習網站開發的筆記，歡迎交流 (*´∀`)~♥</p>
+      <p>
+        這裡記錄我學習網站開發的筆記
+        <br />
+        歡迎交流 (*´∀`)~♥
+      </p>
       <div className={classes.social}>
         <Link href="https://www.linkedin.com/in/castle2668" target="_blank">
           <Image
