@@ -21,9 +21,9 @@ const AllPosts = (props) => {
           <PostsItem key={post.slug} post={post} />
         ))}
       </ul>
-      {showPagination && (
+      {showPagination ? (
         <Pagination currentPage={currentPage} numPages={numPages} />
-      )}
+      ) : null}
     </section>
   );
 };
