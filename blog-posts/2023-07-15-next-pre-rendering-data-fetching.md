@@ -192,7 +192,7 @@ export async function getStaticPaths() {
 
 這讓我們可以預先生成那些時常被瀏覽的頁面，並針對不太頻繁訪問的頁面延遲生成，只在需要用到時才開始進行預先生成。
 
-但是，在使用 `fallback: true` 功能時，你需要在組件中準備好「Fallback 狀態」。
+但是，在使用 `fallback: true` 功能時，你需要在元件中準備好「Fallback 狀態」。
 
 因為有些頁面是在需要時才初次載入，所以需要像是 Loading 等呈現方式，以便等待 Next.js 初次載入頁面，載入完成後 Next.js 會自動更新這個頁面並且返回內容。
 

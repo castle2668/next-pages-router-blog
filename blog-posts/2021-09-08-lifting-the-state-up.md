@@ -1,13 +1,13 @@
 ---
-title: 'Lifting The State Up in React'
-excerpt: 'Props 的用途是讓父子元件之間傳遞狀態，使子元件也能使用到父元件定義的狀態。而子元件的狀態也能透過 Lifting State 的方式提升給父元件使用。'
+title: '[React] Lifting The State Up'
+excerpt: 'Props 的用途是讓父子元件之間傳遞狀態，使子元件也能使用到父元件定義的狀態，而子元件的狀態也能透過 Lifting State 的方式提升給父元件使用。'
 tags: ['React']
 date: '2021-09-08'
 ---
 
-> 觀念近似 Vue 的 Emit (From Child to Parent)
+初次看到這個觀念時，覺得這就像是 Vue 2 的 Emit，都是 From Child to Parent 的作法。
 
-當 Parent component 需要取得由 Child component 生成的 data 時，我們可以使用 Lifting The State Up 的技巧。
+在 React 中，當父元件需要取得由子元件生成的 data 時，我們可以使用 Lifting The State Up 的技巧，同時因為狀態不是存放在父元件，子元件的改動並不會讓父元件執行 Re-rendering，某方面來說也是一種效能優化。
 
 ## STEP 1：父元件傳遞一個函式給子元件
 
