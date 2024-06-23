@@ -86,7 +86,7 @@ export const sendCartData = (cart) => {
 };
 ```
 
-這個 `sendCartData` 就是我們自定義的 Action Creator Function (Thunk)，它可以幫助我們把組件裡的邏輯抽離，改為放在 Redux 裡面，讓組件更精簡。
+這個 `sendCartData` 就是我們自定義的 Action Creator Function (Thunk)，它可以幫助我們把元件裡的邏輯抽離，改為放在 Redux 裡面，讓元件更精簡。
 
 這個邏輯可以放在元件中，也可以抽離成 Thunk 放在 Redux 中。  
 由於後者的概念與 Vuex 比較接近，因此在個人經驗上，我會對 Thunk 的方式感覺到比較熟悉。

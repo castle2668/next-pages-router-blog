@@ -47,7 +47,7 @@ export default useCounter;
 
 在 Custom Hooks 中，使用 `useState` 與 `useEffect` 會與使用它的元件做連結。
 
-如果在「多個組件」使用同一個 Custom Hook，每個組件都會產生一套自己的 Custom Hook，也就是裡面使用的 State 或 Effect 等資料都是「不會共用」的。
+如果在「多個元件」使用同一個 Custom Hook，每個元件都會產生一套自己的 Custom Hook，也就是裡面使用的 State 或 Effect 等資料都是「不會共用」的。
 
 ## Using Custom Hooks
 

@@ -17,11 +17,11 @@ componentDidUpdate() {
 }
 ```
 
-在 JavaScript 中我們常用的就是 `try...catch`，但是它僅限在一個組件下使用，如果今天是子組件拋出錯誤，想要在父組件 Handle Error 就沒有辦法。
+在 JavaScript 中我們常用的就是 `try...catch`，但是它僅限在一個元件下使用，如果今天是子元件拋出錯誤，想要在父元件 Handle Error 就沒有辦法。
 
-這時候我們就能使用 **Error Boundary** 與 **componentDidCatch** 生命週期函式來處理這個情況，每當 ErrorBoundary 裡面的子組件拋出錯誤時就會觸發 componentDidCatch。
+這時候我們就能使用 **Error Boundary** 與 **componentDidCatch** 生命週期函式來處理這個情況，每當 ErrorBoundary 裡面的子元件拋出錯誤時就會觸發 componentDidCatch。
 
-我們可以將 ErrorBoundary 作為「保護子組件」的父組件，因此 `render()` 函式的內容就單純只放子組件的內容，也就是 `this.props.children`，
+我們可以將 ErrorBoundary 作為「保護子元件」的父元件，因此 `render()` 函式的內容就單純只放子元件的內容，也就是 `this.props.children`，
 
 ```jsx
 import { Component } from 'react';
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component {
 export default ErrorBoundary;
 ```
 
-像這樣將 ErrorBoundary 組件包覆在想要保護的組件外圍。（其實 ErrorBoundary 也可以包覆多個組件，不只一個）
+像這樣將 ErrorBoundary 元件包覆在想要保護的元件外圍。（其實 ErrorBoundary 也可以包覆多個元件，不只一個）
 
 ```jsx
 <ErrorBoundary>

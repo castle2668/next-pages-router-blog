@@ -9,7 +9,7 @@ date: '2022-10-11'
 
 > Avoid unnecessary re-rendering "when Props is Object type"
 
-useCallback 允許我們儲存跨組件執行的「函式」，它會把函式儲存在 React 內存記憶體，讓使用時的物件位址都是指向同一個地方。
+useCallback 允許我們儲存跨元件執行的「函式」，它會把函式儲存在 React 內存記憶體，讓使用時的物件位址都是指向同一個地方。
 
 ```jsx
 // 回傳一個 memoized 的 callback
@@ -22,7 +22,7 @@ const memoizedCallback = useCallback(() => {
 
 ### Dependencies
 
-useCallback 與 useEffect 一樣都要傳入 dependency array，要放入我們在函式中使用到的（相關於組件的）任何東西。
+useCallback 與 useEffect 一樣都要傳入 dependency array，要放入我們在函式中使用到的（相關於元件的）任何東西。
 
 ```jsx
 // 這裡用到 setState 但是不用放入 dependency，因為 React 保證 setState 不會變化

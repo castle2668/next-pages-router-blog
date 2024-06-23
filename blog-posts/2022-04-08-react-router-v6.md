@@ -12,7 +12,7 @@ date: '2022-04-08'
   - 不再需要 exact 屬性
 - 調整 Nested Routes 定義方式
   - 加上米字號來配對子元件中的 Routes
-  - 巢狀路由的子組件的路徑寫法
+  - 巢狀路由的子元件的路徑寫法
   - 集中定義 Routes 搭配 Outlet Component，且無需米字號
 - NavLink 的 activeClassName 移除，請改用 ClassName
 - 將 Redirect 替換成 Navigate
@@ -73,7 +73,7 @@ date: '2022-04-08'
 
 > 下面會介紹另一個「集中管理」的方式是不需要加上米字號的。
 
-### 子組件的路徑寫法
+### 子元件的路徑寫法
 
 V6 巢狀路由不用再撰寫上層的路徑，因為 V6 會幫我們自動判斷並加入，所以 `/welcome/*` 底下的巢狀子路由，就可以將 `/welcome/new-user` 直接寫成 `new-user`。
 
@@ -97,7 +97,7 @@ const Welcome = () => {
 
 ### V6 集中定義：Routes 與 Outlet 元件
 
-React Router V6 全新支援將 Nested Routes 集中於 App.js 中定義，讓我們更方便地管理巢狀路由，而非分散在各個組件當中。
+React Router V6 全新支援將 Nested Routes 集中於 App.js 中定義，讓我們更方便地管理巢狀路由，而非分散在各個元件當中。
 
 另外，使用這個定義方式的話，父層的 Route 可以不用加上米字號！
 
