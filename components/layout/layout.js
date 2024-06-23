@@ -15,10 +15,11 @@ const Layout = (props) => {
       </Head>
       <DefaultSeo
         title="大貓的第一個家"
-        description="I post about programming and web development."
+        description="Damao's first homepage. I post about programming and web development."
         openGraph={{
           title: '大貓的第一個家',
-          description: 'I post about programming and web development.',
+          description:
+            "Damao's first homepage. I post about programming and web development.",
           images: [
             {
               url: '/images/site/avatar.jpeg',
@@ -46,7 +47,7 @@ const Layout = (props) => {
           {
             name: 'keywords',
             content:
-              'programming, web development, frontend, javascript, react, next.js, ant design, css, eslint, git, html, information ethics, life, lodash, nuk, open data, operating system, prettier, quasar, redux, redux toolkit, react router, sdg, swr, styled components, vue, movie',
+              'Damao first homepage, programming, web development, frontend, javascript, react, next.js, ant design, css, eslint, git, html, information ethics, life, lodash, nuk, open data, operating system, prettier, quasar, redux, redux toolkit, react router, sdg, swr, styled components, vue, movie',
           },
         ]}
       />
