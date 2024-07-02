@@ -46,7 +46,6 @@ export const getStaticProps = (context) => {
       tag,
       posts,
     },
-    revalidate: 600,
   };
 };
 
