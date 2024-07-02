@@ -48,7 +48,6 @@ export const getStaticProps = (context) => {
       currentPage,
       numPages,
     },
-    revalidate: 600,
   };
 };
 
