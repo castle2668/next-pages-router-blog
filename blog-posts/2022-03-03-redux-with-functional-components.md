@@ -5,7 +5,7 @@ tags: ['React', 'Redux']
 date: '2022-03-03'
 ---
 
-## ⚓ useSelector hook
+## useSelector hook
 
 > A hook to access the redux store's state, and manage the subscription behind the scenes.
 
@@ -30,7 +30,7 @@ export default Counter;
 
 當 Redux store 更新時，使用 `counter` 的 Component 也會一起被更新（重新評估、執行），因為這樣才能確保接收 Redux 最新的 `state` 喔。
 
-## ⚓ useDispatch hook
+## useDispatch hook
 
 > A hook to access the redux `dispatch` function.
 

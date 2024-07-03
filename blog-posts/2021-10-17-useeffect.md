@@ -21,7 +21,7 @@ React 是透過操作 DOM 去完成 UI 渲染，每當元件的 State 改變，R
 
 如果今天遇到這些 Effects，我們都會需要透過 `useEffect()` 來處理喔。
 
-## ⚓ useEffect Hook
+## useEffect Hook
 
 > [useEffect - React 官方文件](https://zh-hant.reactjs.org/docs/hooks-reference.html#useeffect)
 
@@ -155,7 +155,7 @@ useEffect(() => {
   setTimeout(() => {
     console.log('Checking form validity!');
     setFormIsValid(
-      enteredEmail.includes('@') && enteredPassword.trim().length > 6
+      enteredEmail.includes('@') && enteredPassword.trim().length > 6,
     );
   }, 500);
 
@@ -184,7 +184,7 @@ useEffect(() => {
   const identifier = setTimeout(() => {
     console.log('Checking form validity!');
     setFormIsValid(
-      enteredEmail.includes('@') && enteredPassword.trim().length > 6
+      enteredEmail.includes('@') && enteredPassword.trim().length > 6,
     );
   }, 500);
 
