@@ -15,13 +15,13 @@ date: '2021-12-03'
 export default React.memo(DemoOutput);
 ```
 
-React.memo 會去看這個 Component 所傳入使用的 Props 是否改變 (New props value vs. Previous props value)。如果父元件給的 Props 有改變，React 才會重新執行與評估這個子元件，而不是每次都重新執行。
+`React.memo` 會去看這個 Component 所傳入使用的 Props 是否改變 (New props value vs. Previous props value)。如果父元件給的 Props 有改變，React 才會重新執行與評估這個子元件，而不是每次都重新執行。
 
 ## Shallow Compare
 
-React.memo 是使用 Shallow Compare，也就是如果 Props 的類別是 Object (or Array or Function)，即使傳的是一樣的值，React 在比較兩者時仍然會將它們判斷為不同，這也是 JavaScript 的特性。
+`React.memo` 是使用 Shallow Compare，也就是如果 Props 的類別是 Object (or Array or Function)，即使傳的是一樣的值，React 在比較兩者時仍然會將它們判斷為不同，這也是 JavaScript 的特性。
 
-例如：傳給 `Button` 的 Props `onClick` 是一個 `setState` (`toggleParagraphHandler`) 函式，所以即使包上 `React.memo()` 也還是會一直重新執行渲染。
+例如：傳給 Button 的 Props `onClick` 是一個 setState 函式 (`toggleParagraphHandler`)，所以即使包上 `React.memo()` 也還是會一直重新執行渲染。
 
 ```jsx
 <Button onClick={toggleParagraphHandler}>Toggle Paragraph!</Button>
@@ -29,7 +29,7 @@ React.memo 是使用 Shallow Compare，也就是如果 Props 的類別是 Object
 // {} === {} // false
 ```
 
-這樣代表只要 Props 是物件，React.memo 就沒辦法處理了嗎？關於這一點可以搭配 useCallback 與 useMemo 等 Hooks 來解決喔。
+這樣代表只要 Props `是物件，React.memo` 就沒辦法處理了嗎？關於這一點可以搭配 `useCallback` 與 `useMemo` 等 Hooks 來解決喔。
 
 ## 回顧
 

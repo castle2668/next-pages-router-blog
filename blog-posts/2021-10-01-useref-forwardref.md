@@ -9,7 +9,7 @@ date: '2021-10-01'
 
 Ref 就是 Reference 的意思，它是一個「唯讀屬性」，只能讀不能寫。如果我們只是想要讀取一個值，可以使用 Ref 就好，不需要使用到 State。
 
-## ⚓ useRef Hook
+## useRef Hook
 
 Ref 的主要用法，通常是用來訪問 DOM。
 

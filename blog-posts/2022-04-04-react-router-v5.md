@@ -230,7 +230,7 @@ const params = useParams();
 
 ## Hooks
 
-### ⚓️ useParams Hook
+### useParams Hook
 
 `useParams` Hook 會回傳一個含有「網址參數」的物件，存取的 Key 就是註冊動態路由時的參數名稱。
 
@@ -248,7 +248,7 @@ const ProductDetail = () => {
 };
 ```
 
-### ⚓️ useHistory Hook
+### useHistory Hook
 
 用於更改瀏覽器的歷史紀錄，提供 `push` 與 `replace` 等方法，前者可以返回上一頁，後者則無法。
 
@@ -272,7 +272,7 @@ history.push({
 });
 ```
 
-### ⚓️ useLocation Hook
+### useLocation Hook
 
 `useLocation` Hook 可以取得當前載入的頁面的訊息，而且是不可變的 (immutable)。
 
@@ -303,7 +303,7 @@ A: There is a difference which might be relevant in a specific situation, or mig
 _"It is also found on `history.location` but you shouldn’t use that because it’s mutable. You can read more about that in the [history](https://v5.reactrouter.com/web/api/history) doc._  
 _A `location` object is never mutated so you can use it in the lifecycle hooks to determine when navigation happens, this is really useful for data fetching and animation."_
 
-### ⚓️ useRouteMatch Hook
+### useRouteMatch Hook
 
 `useRouteMatch` Hook 可以取得當前所在的路徑，適合用於取代 hard-coded 的動態路徑。
 
