@@ -69,7 +69,7 @@ const customRenderers = {
 };
 
 const PostContent = ({ post }) => {
-  const { title, image, date, slug, content } = post;
+  const { title, image, date, slug, content, excerpt } = post;
 
   const imagePath = `/images/blog-posts/${slug}/${image}`;
   const formattedDate = new Date(date).toLocaleDateString('zh-TW', {
@@ -81,6 +81,7 @@ const PostContent = ({ post }) => {
   return (
     <article className={classes.content}>
       <PostHeader title={title} image={image && imagePath} />
+      <p>{excerpt}</p>
       <p className={classes.date}>
         <time>📆 {formattedDate}</time>
       </p>
