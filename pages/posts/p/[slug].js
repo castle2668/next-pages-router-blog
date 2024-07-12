@@ -13,6 +13,8 @@ const PaginatedPostsPage = (props) => {
         openGraph={{
           url: `https://www.damao.dev/posts/p/${props.currentPage}`,
         }}
+        noindex={true}
+        nofollow={true}
       />
       <AllPosts
         posts={props.posts}
