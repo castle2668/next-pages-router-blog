@@ -9,9 +9,7 @@ tags: ['React', 'React Router']
 
 在 React 中，如果要提交表單，我們通常不會採取原生的提交方式，而是利用 State 去管理表單資料，並建立 Function 去串接 API 以送出表單，可能還會加上 Loading 效果、處理 Error 與 Redirect 等等。
 
-React Router V6 提供的 `<Form>` 元件會阻止原生的表單行為，路由會在表單送出後執行 `action` 的內容。
-
-以下是一個簡單的範例：
+React Router V6 提供的 `<Form>` 元件會阻止原生的表單行為，路由會在表單送出後執行 `action` 的內容，以下是一個簡單的範例。
 
 ```jsx
 import { Form } from 'react-router-dom';
@@ -61,7 +59,7 @@ export const action = async ({ request, params }) => {
 };
 ```
 
-最後面，我們使用 React Router 提供的 `redirect()` 函式來進行重新導頁。
+最後我們使用了 React Router 提供的 `redirect()` 函式來進行重新導頁。
 
 當判斷已成功取得回應時，我們傳入目標路由作為該函式的參數，例如：執行 `return redirect("/events")` 讓 Router 導回活動列表頁面。
 
@@ -130,3 +128,7 @@ export const action = async ({ request, params }) => {
 看完這篇文章，我們認識了 React Router V6 新增的 Action 與 Form 元件。
 
 除此之外還有許多實用的功能，建議可以看看他們的官方文件，這次更新後文件整理得很不錯。
+
+## References
+
+- [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
