@@ -101,6 +101,8 @@ const RootLayout = () => {
 export default RootLayout;
 ```
 
+> 底下的範例，我們可以看到 `RootLayout` 的擺放位置
+
 ## 巢狀路由的相對與絕對路徑
 
 路由配置上，使用 `"/"` 開頭的路徑為絕對路徑，通常父路由會使用絕對路徑，子路由使用相對路徑並且依賴於父路由。例如：父路由為 `"/root"` 等於網址 `my-domain/root`，而子路由設定 `"products"` 等於網址 `/root/products`。
@@ -248,3 +250,7 @@ export default ProductDetailPage;
 看完這篇文章，我們認識了 React Router V6 的基礎架構，瞭解如何使用它建立一套路由系統，並且能實際應用在專案上。
 
 下一篇文章會介紹 React Router V6 這次新增的 `Loader` 等等全新功能，讓我們的路由系統更加全面。
+
+## References
+
+- [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
