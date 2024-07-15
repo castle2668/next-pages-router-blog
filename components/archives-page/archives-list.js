@@ -10,7 +10,9 @@ const ArchivesList = (props) => {
   return (
     <section className={classes.archives}>
       <h2>Archives</h2>
-      <p>目前總共有 {count} 篇文章 d(`･∀･)b</p>
+      <p>
+        目前總共有 {count} 篇文章 {`ʕ•̀ω•́ʔ✧`}
+      </p>
       {posts.map((item) => (
         <div key={item.year}>
           <h3>{item.year}</h3>

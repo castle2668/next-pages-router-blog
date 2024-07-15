@@ -2,11 +2,5 @@
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
-  "cSpell.words": [
-    "daisyui",
-    "Damao",
-    "nofollow",
-    "Sealman",
-    "Vuex"
-  ]
+  "cSpell.words": ["daisyui", "Damao", "Sealman", "Vuex"]
 }

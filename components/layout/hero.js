@@ -19,7 +19,7 @@ function Hero() {
       <p>
         這裡記錄我學習網站開發的筆記
         <br />
-        歡迎交流 (*´∀`)~♥
+        歡迎交流 {`(ゝ∀･)b`}
       </p>
       <div className={classes.social}>
         <Link href="https://www.linkedin.com/in/castle2668" target="_blank">
