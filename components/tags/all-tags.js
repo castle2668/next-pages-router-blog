@@ -10,7 +10,9 @@ const AllTags = (props) => {
   return (
     <section className={classes.tags}>
       <h2>Tags</h2>
-      <p>目前總共有 {tags.length} 個標籤 (`・ω・´)</p>
+      <p>
+        目前總共有 {tags.length} 個標籤 {`(๑•̀ω•́)ノ`}
+      </p>
       <ul>
         {tags.map((tag) => (
           <li key={tag.slug}>

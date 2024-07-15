@@ -1,8 +1,8 @@
 ---
-title: 'Code Reuse: React Higher Order Component (HOC)'
+title: 'React Code Reuse - Higher Order Component (HOC)'
 excerpt: '本篇文章會透過一個簡單的 Functional Components 的範例，讓大家瞭解 React Higher Order Component (HOC) 的實作方式。'
 tags: ['React']
-date: '2022-02-14'
+date: '2024-07-13'
 ---
 
 ## Higher Order Component (HOC)

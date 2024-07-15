@@ -34,7 +34,7 @@ date: '2022-12-31'
 - Gatsby Cloud
 - Google Analytics
 
-## 三、Ring Fit Advanture
+## 三、Ring Fit Adventure
 
 之前樂屋的可愛同事們送我的健身環，當時玩不到兩天就放在角落積灰塵了 🫣
 
