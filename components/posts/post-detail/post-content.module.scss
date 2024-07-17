@@ -39,11 +39,8 @@
 
   a {
     word-break: break-all;
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--color-maple);
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   code:not([class]) {
