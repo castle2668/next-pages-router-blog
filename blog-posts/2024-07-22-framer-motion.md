@@ -2,7 +2,7 @@
 title: '為你的 React Apps 加上動畫效果'
 excerpt: '沒有動畫效果的 Web Apps 不是說不行，但就是在完整度上少了一點什麼。如果可以適當添加一些動畫效果，除了可以讓網站看起來更加用心，也可以吸引使用者持續瀏覽。本文會介紹前端加入動畫效果的幾種方式，包含 CSS Transitions、CSS Animations，以及 Framer Motion 這套動畫效果 Library。'
 tags: ['React', 'CSS', 'Framer Motion']
-date: '2024-07-17'
+date: '2024-07-22'
 ---
 
 介紹順序會從 CSS 開始，最後提到 Framer Motion 的使用。許多情況下，我們或許不需要使用到 Framer Motion，而是使用 CSS 內建的 Transitions 與 Animations 就可以完成我們想要達到的效果。
