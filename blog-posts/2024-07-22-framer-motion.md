@@ -1,6 +1,6 @@
 ---
 title: '為你的 React Apps 加上動畫效果'
-excerpt: '沒有動畫效果的 Web Apps 不是說不行，但就是在完整度上少了一點什麼。如果可以適當添加一些動畫效果，除了可以讓網站看起來更加用心，也可以吸引使用者持續瀏覽。本文會介紹前端加入動畫效果的幾種方式，包含 CSS Transitions、CSS Animations，以及 Framer Motion 這套動畫效果 Library。'
+excerpt: '沒有動畫效果的 Web Apps 不是說不好，但就是在完整度上少了一點什麼。如果可以適當添加一些動畫效果，除了可以讓網站看起來更加用心，也可以吸引使用者持續瀏覽。本文會介紹前端加入動畫效果的幾種方式，包含 CSS Transitions、CSS Animations，以及 Framer Motion 這套動畫效果 Library。'
 tags: ['React', 'CSS', 'Framer Motion']
 date: '2024-07-22'
 ---
@@ -96,15 +96,19 @@ function App() {
 
 可以通過以下屬性，為元素加上動畫：
 
-- `initial`：元素加入 DOM 時，為將要執行的動畫加上初始值
-- `animate`：指定要執行動畫的屬性與目標值
-- `exit`：從 DOM 刪除該元素時，希望顯示的動畫效果
-- `transition`：動畫執行的細節設定
+- `initial`：元素加入 DOM 時，為將要執行的動畫加上「初始」值
+- `animate`：指定要「執行」動畫的屬性與目標值
+- `exit`：從 DOM「刪除」該元素時，希望顯示的動畫效果
+- `transition`：動畫執行的細節設定，可以設置 `duration`、`type`、`stiffness` 等等
 - `AnimatePresence`：延緩內部元件從 React Tree 中消失，等到動畫完成才真正地移除 DOM
+- `whileHover`：whileXxx 定義的動畫效果，會在 Tapping 或者 Hovering 等時候執行
+- `variants`：建立變數方便複用效果
 
-> 其他屬性可以參考 [Framer Motion 官方文件](https://www.framer.com/motion/)
+> 更多詳細內容可以參考 [Framer Motion 官方文件](https://www.framer.com/motion/)
 
-範例 1：根據不同欄位的輸入值，方塊會執行移動或旋轉的動畫
+### 範例：位移效果
+
+這個範例中，我們根據不同欄位的輸入值，讓方塊執行移動或旋轉動畫。
 
 ```jsx
 import { motion } from 'framer-motion';
@@ -127,7 +131,7 @@ function App() {
 }
 ```
 
-範例 2：取代 CSS Animations 完成卡片滑出效果
+### 範例：取代 CSS Animations 完成卡片滑出效果
 
 這個範例我們透過 `initial` 與 `animate` 這兩個屬性，讓 Modal 加入到 DOM 之後，從初始值執行動畫到指定的目標值，以完成由下往上滑出卡片的動畫效果。
 
