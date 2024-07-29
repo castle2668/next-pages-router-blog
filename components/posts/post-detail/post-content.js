@@ -9,6 +9,7 @@ import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
 import remarkGfm from 'remark-gfm';
 
+import Tags from '@/components/ui/tags';
 import { replaceLast } from '@/utils/helper';
 
 import classes from './post-content.module.scss';
@@ -69,7 +70,7 @@ const customRenderers = {
 };
 
 const PostContent = ({ post }) => {
-  const { title, image, date, slug, content, excerpt } = post;
+  const { title, image, date, slug, content, excerpt, tags } = post;
 
   const imagePath = `/images/blog-posts/${slug}/${image}`;
   const formattedDate = new Date(date).toLocaleDateString('zh-TW', {
@@ -81,10 +82,13 @@ const PostContent = ({ post }) => {
   return (
     <article className={classes.content}>
       <PostHeader title={title} image={image && imagePath} />
+      <div className={classes.meta}>
+        <Tags tags={tags} />
+        <p className={classes.date}>
+          <time>📆 {formattedDate}</time>
+        </p>
+      </div>
       <p>{excerpt}</p>
-      <p className={classes.date}>
-        <time>📆 {formattedDate}</time>
-      </p>
       <ReactMarkdown components={customRenderers} remarkPlugins={[remarkGfm]}>
         {content}
       </ReactMarkdown>

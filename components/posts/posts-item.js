@@ -3,7 +3,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { slugify } from '@/utils/helper';
+import Tags from '@/components/ui/tags';
 
 import classes from './posts-item.module.scss';
 
@@ -27,19 +27,7 @@ const PostsItem = (props) => {
 
   return (
     <li className={classes.post}>
-      {tags && (
-        <div className={classes.tags}>
-          {tags.map((tag) => (
-            <Link
-              key={tag}
-              href={`/tags/${slugify(tag)}`}
-              className={classes.tag}
-            >
-              {tag}
-            </Link>
-          ))}
-        </div>
-      )}
+      {tags && <Tags tags={tags} />}
       <div className={classes.content}>
         <Link href={linkPath}>
           <h2>{title}</h2>

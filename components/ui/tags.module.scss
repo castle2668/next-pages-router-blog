@@ -1,0 +1,16 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  .tag {
+    font-size: 0.8rem;
+    color: #332200;
+    background: #eee;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    &:hover {
+      color: var(--color-maple);
+    }
+  }
+}

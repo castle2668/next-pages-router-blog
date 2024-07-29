@@ -22,7 +22,7 @@ function Hero() {
         歡迎交流 {`(ゝ∀･)b`}
       </p>
       <div className={classes.social}>
-        <Link href="https://www.linkedin.com/in/castle2668" target="_blank">
+        <Link href="https://www.linkedin.com/in/sean-huang-tw" target="_blank">
           <Image
             src="/images/site/icon-linkedin.svg"
             alt="LinkedIn"
