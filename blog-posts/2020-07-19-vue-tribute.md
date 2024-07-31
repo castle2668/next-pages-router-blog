@@ -88,10 +88,10 @@ tributeOptions: {
 // 計算留言 (content) 裡面標記了哪些人
 const str = this.content;
 const pattern = /\B@([a-z0-9_-]+)/gi; // 透過正規表達式查找符合規則的字段
-const arr = str.match(pattern); // ['@sean', '@damao']
+const arr = str.match(pattern); // ['@sean', '@sealman']
 let result = [];
 if (arr) {
-  result = arr.map((item) => item.substr(1)); // ['sean', 'damao']
+  result = arr.map((item) => item.substr(1)); // ['sean', 'sealman']
 }
 ```
 

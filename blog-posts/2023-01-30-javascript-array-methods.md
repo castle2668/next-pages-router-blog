@@ -1,6 +1,6 @@
 ---
 title: 'The JavaScript Array Methods Handbook'
-excerpt: '健忘的大貓常常需要查看的陣列處理方法小抄。'
+excerpt: '健忘的 Sean 常常需要查看的陣列處理方法小抄。'
 tags: ['JavaScript']
 date: '2023-01-30'
 ---

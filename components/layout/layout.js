@@ -14,12 +14,11 @@ const Layout = (props) => {
         <link rel="icon" href="/images/site/favicon.ico" sizes="any" />
       </Head>
       <DefaultSeo
-        title="大貓的第一個家"
-        description="Damao's first homepage. I post about programming and web development."
+        title="Sean's Blog"
+        description="I post about programming and web development."
         openGraph={{
-          title: '大貓的第一個家',
-          description:
-            "Damao's first homepage. I post about programming and web development.",
+          title: "Sean's Blog",
+          description: 'I post about programming and web development.',
           images: [
             {
               url: '/images/site/avatar.jpeg',
@@ -31,8 +30,8 @@ const Layout = (props) => {
           ],
           type: 'website',
           locale: 'zh_tw',
-          url: 'https://www.damao.dev/',
-          siteName: '大貓的第一個家',
+          url: 'https://www.seanhuang.dev/',
+          siteName: "Sean's Blog",
         }}
         twitter={{
           handle: '@castle2668',
@@ -47,7 +46,7 @@ const Layout = (props) => {
           {
             name: 'keywords',
             content:
-              'Damao first homepage, programming, web development, frontend, javascript, react, next.js, ant design, css, eslint, git, html, information ethics, life, lodash, nuk, open data, operating system, prettier, quasar, redux, redux toolkit, react router, sdg, swr, styled components, vue, movie',
+              'sean blog, programming, web development, frontend, javascript, react, next.js, ant design, css, eslint, git, html, information ethics, life, lodash, nuk, open data, operating system, prettier, quasar, redux, redux toolkit, react router, sdg, swr, styled components, vue, movie',
           },
         ]}
       />

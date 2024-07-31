@@ -35,9 +35,9 @@ git pull
 
 ### 無法 push 的案例（海豹腦補小劇場）
 
-公司裡有「大貓」跟「漂亮阿姨」兩位工程師，大貓下班後高興地看著動漫，看完覺得無聊所以寫了一些 Code 裝認真，完成後 Push 上去哩 :P
+公司裡有「Sean」跟「漂亮阿姨」兩位工程師，Sean 下班後高興地看著動漫，看完覺得無聊所以寫了一些 Code 裝認真，完成後 Push 上去哩 :P
 
-隔天，漂亮阿姨比大貓先到公司，她寫了一些 Code 之後也想要 Push，但是輸入 push 指令 `git push origin master` 後卻出現無法 push 的提示：
+隔天，漂亮阿姨比 Sean 先到公司，她寫了一些 Code 之後也想要 Push，但是輸入 push 指令 `git push origin master` 後卻出現無法 push 的提示：
 
 ![GITHUB](https://i.imgur.com/qU1BLaO.png)
 
@@ -47,10 +47,10 @@ git pull
 
 ![GITHUB](https://i.imgur.com/6ZET7Hb.png)
 
-在這之後，大貓也使用 `git pull` 取得漂亮阿姨新 Push 的檔案哩，並且向漂亮阿姨解釋原理：  
+在這之後，Sean 也使用 `git pull` 取得漂亮阿姨新 Push 的檔案哩，並且向漂亮阿姨解釋原理：  
 「總而言之，妳一定要先拿到我的 Commit 紀錄，才能繼續 Push 東西上去，即使有時間先後順序也沒關係，Git 會自動做合併的動作。因此，當妳出現無法 Push 的時候，就代表遠端有 Code 是妳還沒有 Pull 的」。
 
-從此以後，大貓與漂亮阿姨利用著 Git 進行各種合作，可喜可賀！全劇終。
+從此以後，Sean 與漂亮阿姨利用著 Git 進行各種合作，可喜可賀！全劇終。
 
 ## git fetch
 

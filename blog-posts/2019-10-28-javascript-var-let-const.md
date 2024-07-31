@@ -137,11 +137,11 @@ for (let i = 0; i < listLength; i++) {
 
 ```javascript
 const obj = {
-  url: 'https://www.damao.dev',
+  url: 'https://www.seanhuang.dev',
 };
 Object.freeze(obj); // 使用 freeze 就不能修正了
 obj.url = '30';
-console.log(obj.url); // 30 -> https://www.damao.dev
+console.log(obj.url); // 30 -> https://www.seanhuang.dev
 ```
 
 ## var 有 Hoisting；let 與 const 有 TDZ

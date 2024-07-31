@@ -17,16 +17,16 @@ JavaScript 是語法作用域（又稱為靜態作用域），語法在解析時
 
 當作用域內沒有需要的變數時，JavaScript 就會向外查找，如果向外查找還是找不到，就會回傳 `變數 is not defined` 的錯誤。
 
-下方範例中，因為 JavaScript 的作用域是在**函式**裡面，因此函式內會讀到 `Damao` 這個變數，但是外層是讀不到的。
+下方範例中，因為 JavaScript 的作用域是在**函式**裡面，因此函式內會讀到 `sean` 這個變數，但是外層是讀不到的。
 
 ```javascript
 function callName() {
-  var Damao = '大貓';
-  console.log(Damao);
+  var sean = 'Sean';
+  console.log(sean);
 }
 
-callName(); // 大貓
-console.log(Damao); // Damao is not defined
+callName(); // Sean
+console.log(sean); // Sean is not defined
 ```
 
 ## 動態作用域
