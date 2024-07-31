@@ -15,7 +15,7 @@ function Hero() {
           height={100}
         />
       </div>
-      <h1>Hi, 我是大貓</h1>
+      <h1>{`Hi, I'm Sean`}</h1>
       <p>
         這裡記錄我學習網站開發的筆記
         <br />

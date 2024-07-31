@@ -47,13 +47,13 @@ JavaScript 屬於直譯式語言，無法直接被瀏覽器閱讀，需經過解
 LHS：賦予值到左側的變數上
 
 ```javascript
-var author = 'Damao'; // LHS
+var author = 'Sean'; // LHS
 ```
 
 LHS 是把右側的值「賦予到左側的變數上」，因此當左側無法被賦予值的時候，就會出現錯誤。
 
 ```javascript
-'Damao' = 1;
+'Sean' = 1;
 // Error: Line 1: Invalid left-hand side in assignment
 ```
 
@@ -62,7 +62,7 @@ LHS 是把右側的值「賦予到左側的變數上」，因此當左側無法�
 RHS：取值來自於右側的變數上
 
 ```javascript
-var author = 'Damao'; // LHS
+var author = 'Sean'; // LHS
 console.log(author); // RHS
 var man = author;
 console.log(autho);

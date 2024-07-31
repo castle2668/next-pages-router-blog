@@ -4,10 +4,10 @@
   "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
   "cSpell.words": [
     "daisyui",
-    "Damao",
     "Duolingo",
     "keyframes",
     "Sealman",
+    "seanhuang",
     "Udemy",
     "VIOS",
     "Vuex"
