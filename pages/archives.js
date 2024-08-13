@@ -1,12 +1,11 @@
 import { NextSeo } from 'next-seo';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import ArchivesList from '@/components/archives-page/archives-list';
 import { getArchives, getPostsCount } from '@/utils/archives-util';
 
-const ArchivesPage = (props) => {
-  const { posts, count } = props;
+const Archives = (props) => {
+  const { posts = [], count = 0 } = props;
 
   return (
     <>
@@ -35,13 +34,4 @@ export const getStaticProps = () => {
   };
 };
 
-export default ArchivesPage;
-
-ArchivesPage.propTypes = {
-  posts: PropTypes.array,
-  count: PropTypes.number,
-};
-ArchivesPage.defaultProps = {
-  posts: [],
-  count: 0,
-};
+export default Archives;
