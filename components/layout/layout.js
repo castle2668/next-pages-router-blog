@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Footer from './footer';
@@ -8,6 +7,8 @@ import Header from './header';
 import classes from './layout.module.css';
 
 const Layout = (props) => {
+  const { children = null } = props;
+
   return (
     <>
       <Head>
@@ -52,18 +53,11 @@ const Layout = (props) => {
       />
       <Header />
       <div className={classes.container}>
-        <main>{props.children}</main>
+        <main>{children}</main>
       </div>
       <Footer />
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node,
-};
-Layout.defaultProps = {
-  children: null,
 };
 
 export default Layout;
